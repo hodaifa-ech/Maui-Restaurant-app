@@ -49,64 +49,6 @@ A cross-platform application built with .NET MAUI for managing various aspects o
 *   **Dependency Injection:** Managed by .NET MAUI's host builder.
 *   **BCrypt.Net-Next:** Library for secure password hashing.
 
-/newRestaurant
-|-- App.xaml / App.xaml.cs                     # Application definition
-|-- AppShell.xaml / AppShell.xaml.cs          # Main shell navigation (Flyout/Tabs)
-|-- MauiProgram.cs                            # App startup, DI registration, DB setup
-|
-|-- Converters/                               # Value converters for XAML bindings
-|   |-- InverseBoolConverter.cs
-|   |-- InverseBoolToFontAttributesConverter.cs
-|
-|-- Data/                                     # Database related files
-|   |-- RestaurantDbContext.cs                # EF Core DbContext
-|   |-- RestaurantDbContextFactory.cs         # For EF Core design-time tools
-|
-|-- Migrations/                               # EF Core database migration files
-|
-|-- Models/                                   # Data model classes (POCOs)
-|   |-- User.cs, Category.cs, Plat.cs, Table.cs, Reservation.cs,
-|   |-- Notification.cs, Cart.cs, CartPlat.cs, UserRole.cs, etc.
-|
-|-- Resources/                                # App resources (Images, Fonts, Styles)
-|   |-- Images/
-|   |-- Fonts/
-|   |-- Styles/
-|
-|-- Services/                                 # Business logic and data access services
-|   |-- Interfaces/                           # Service contracts (IAuthService, IUserService, etc.)
-|   |-- AuthService.cs
-|   |-- CartService.cs
-|   |-- CategoryService.cs
-|   |-- MauiNavigationService.cs
-|   |-- NotificationService.cs
-|   |-- PlatService.cs
-|   |-- ReservationService.cs
-|   |-- StatisticsService.cs
-|   |-- TableService.cs
-|   |-- UserService.cs
-|
-|-- ViewModels/                               # ViewModels for MVVM pattern
-|   |-- BaseViewModel.cs                      # Base class for common VM logic (IsBusy, Title)
-|   |-- LoginViewModel.cs, RegisterViewModel.cs, UserProfileViewModel.cs,
-|   |-- CategoriesViewModel.cs, CategoryDetailViewModel.cs,
-|   |-- PlatsViewModel.cs, PlatDetailViewModel.cs,
-|   |-- TablesViewModel.cs, TableDetailViewModel.cs,
-|   |-- ReservationsViewModel.cs, ReservationDetailViewModel.cs,
-|   |-- CartViewModel.cs, NotificationsViewModel.cs, StatisticsViewModel.cs
-|
-|-- Views/                                    # XAML pages and code-behind
-|   |-- LoginPage.xaml, RegisterPage.xaml, UserProfilePage.xaml,
-|   |-- CategoriesPage.xaml, CategoryDetailPage.xaml,
-|   |-- PlatsPage.xaml, PlatDetailPage.xaml,
-|   |-- TablesPage.xaml, TableDetailPage.xaml,
-|   |-- ReservationsPage.xaml, ReservationDetailPage.xaml,
-|   |-- CartPage.xaml, NotificationsPage.xaml, StatisticsPage.xaml
-|
-|-- Platforms/                                # Platform-specific code
-|-- Properties/                               # Project settings (launchSettings.json)
-|-- newRestaurant.csproj                      # Project file (dependencies, settings)
-|-- README.md                                 # This file
 
 ## Setup and Configuration
 
