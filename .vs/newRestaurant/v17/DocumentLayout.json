@@ -3,60 +3,104 @@
   "WorkspaceRootPath": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Migrations\\20250422214114_intialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:newRestaurant\\Migrations\\20250422214114_intialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\data\\restaurantdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\data\\restaurantdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\data\\restaurantdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\data\\restaurantdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\tablesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\tablesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tabledetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tabledetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tabledetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tabledetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tablespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tablespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tablespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tablespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\tabledetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\tabledetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\notificationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\notificationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\tableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\tableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\converters\\inversebooltofontattributesconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\converters\\inversebooltofontattributesconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\itableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\itableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\notificationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\notificationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\platsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\platsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\statisticspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\statisticspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\plat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\plat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\data\\restaurantdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\data\\restaurantdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\data\\restaurantdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\data\\restaurantdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\statisticspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\statisticspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\statisticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\statisticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\categorydetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,6 +111,58 @@
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\categoriesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\mauinavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\mauinavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\statisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\statisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\istatisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\istatisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\reservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\reservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\reservationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\reservationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\reservationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\reservationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\reservationdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\reservationdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tabledetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tabledetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tablespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tablespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\categorydetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\categorydetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -75,52 +171,40 @@
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\categoriespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\categorydetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\categorydetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\tabledetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\tabledetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\tablesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\tablesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\categoriespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\categoriespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\tableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\tableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tablespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tablespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\cartplat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\cartplat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\reservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\reservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\tabledetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\tabledetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\reservationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,12 +215,32 @@
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\reservationdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\itableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\itableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\platsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\platsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\iplatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\iplatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\platdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\platdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\platspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\platspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\platdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\platdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\platspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -147,8 +251,86 @@
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\platdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\categorydetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\categorydetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\categoriespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\categoriespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\platservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\platservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\cartplat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\cartplat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hodaifa\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hodaifa\\.nuget\\packages\\communitytoolkit.maui\\9.1.1\\ReadMe.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\migrations\\20250422214114_intialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\migrations\\20250422214114_intialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\cartpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -157,38 +339,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\interface\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\interface\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\reservationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\reservationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\mauinavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\mauinavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|c:\\users\\hodaifa\\desktop\\newrestaurant\\newrestaurant\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{76C5AA4D-990B-4DA5-BFAA-3C36A60DD902}|newRestaurant\\newRestaurant.csproj|solutionrelative:newrestaurant\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\khWinVm\\AppData\\Local\\Temp\\.vsdbgsrc\\10559f5d1209981416bb41c7742adb23e2802b5a\\Views_LoginPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -206,15 +356,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250422214114_intialmigration.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
-              "RelativeToolTip": "newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
+              "Title": "UserProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\UserProfilePage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\UserProfilePage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\UserProfilePage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\UserProfilePage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T21:41:14.525Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T20:24:26.384Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\UserProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\UserProfileViewModel.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T20:23:45.204Z"
             },
             {
               "$type": "Document",
@@ -224,149 +386,613 @@
               "RelativeDocumentMoniker": "newRestaurant\\AppShell.xaml.cs",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\AppShell.xaml.cs",
               "RelativeToolTip": "newRestaurant\\AppShell.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAwKoAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:16:43.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TablesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\TablesViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\TablesViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\TablesViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\TablesViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:21:25.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RestaurantDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContextFactory.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Data\\RestaurantDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContextFactory.cs",
-              "RelativeToolTip": "newRestaurant\\Data\\RestaurantDbContextFactory.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBYAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:13:27.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T20:16:43.285Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MauiProgram.cs",
-              "RelativeToolTip": "newRestaurant\\MauiProgram.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
+              "Title": "UserProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\UserProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\UserProfilePage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\UserProfilePage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\UserProfilePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:16:32.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T20:24:42.04Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RestaurantDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContext.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Data\\RestaurantDbContext.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContext.cs",
-              "RelativeToolTip": "newRestaurant\\Data\\RestaurantDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:13:25.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TableDetailPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\TableDetailPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\TableDetailPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:33:51.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TablesPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TablesPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\TablesPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TablesPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\TablesPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:52:03.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TableDetailPage.xaml",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\TableDetailPage.xaml",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml",
-              "RelativeToolTip": "newRestaurant\\Views\\TableDetailPage.xaml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-22T20:33:27.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\AppShell.xaml",
               "RelativeDocumentMoniker": "newRestaurant\\AppShell.xaml",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\AppShell.xaml",
               "RelativeToolTip": "newRestaurant\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAlwEUAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-22T20:59:55.319Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MauiProgram.cs",
+              "RelativeToolTip": "newRestaurant\\MauiProgram.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:16:32.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InverseBoolConverter.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Converters\\InverseBoolConverter.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Converters\\InverseBoolConverter.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Converters\\InverseBoolConverter.cs",
+              "RelativeToolTip": "newRestaurant\\Converters\\InverseBoolConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T14:12:22.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\IUserService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IUserService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\IUserService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:08:50.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\UserService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\UserService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\UserService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\UserService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwGEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:12:43.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\App.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\App.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\App.xaml",
+              "RelativeToolTip": "newRestaurant\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T12:13:58.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlatsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\PlatsViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\PlatsViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\PlatsViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\PlatsViewModel.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAMwGwAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:38:03.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NotificationsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\NotificationsViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\NotificationsViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\NotificationsViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\NotificationsViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAcwDMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:39:41.304Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "InverseBoolToFontAttributesConverter.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Converters\\InverseBoolToFontAttributesConverter.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Converters\\InverseBoolToFontAttributesConverter.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Converters\\InverseBoolToFontAttributesConverter.cs",
+              "RelativeToolTip": "newRestaurant\\Converters\\InverseBoolToFontAttributesConverter.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA+wBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:48:43.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NotificationsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\NotificationsPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\NotificationsPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\NotificationsPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\NotificationsPage.xaml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T18:45:07.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\App.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\App.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:49:59.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\NotificationService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\NotificationService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:39:16.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\INotificationService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\INotificationService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:38:21.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StatisticsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\StatisticsPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\StatisticsPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\StatisticsPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\StatisticsPage.xaml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T18:12:25.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CartViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CartViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\CartViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CartViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\CartViewModel.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAUwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:44:44.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RestaurantDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContext.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Data\\RestaurantDbContext.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContext.cs",
+              "RelativeToolTip": "newRestaurant\\Data\\RestaurantDbContext.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAQwFEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:13:25.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Plat.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Plat.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\Plat.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Plat.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\Plat.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwB4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:07:17.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RestaurantDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContextFactory.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Data\\RestaurantDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Data\\RestaurantDbContextFactory.cs",
+              "RelativeToolTip": "newRestaurant\\Data\\RestaurantDbContextFactory.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:13:27.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StatisticsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\StatisticsPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\StatisticsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\StatisticsPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\StatisticsPage.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:13:12.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "StatisticsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\StatisticsViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\StatisticsViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\StatisticsViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\StatisticsViewModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:11:40.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CategoriesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoriesViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\CategoriesViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoriesViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\CategoriesViewModel.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwFYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:24:11.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CategoryDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAHMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:53:01.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CartPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\CartPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\CartPage.xaml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAQwFAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-22T20:05:10.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "INavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\INavigationService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\INavigationService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\INavigationService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\INavigationService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:12:48.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MauiNavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\MauiNavigationService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\MauiNavigationService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\MauiNavigationService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\MauiNavigationService.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAwHQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:16:23.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "StatisticsService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\StatisticsService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\StatisticsService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\StatisticsService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\StatisticsService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:16:49.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Notification.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\Notification.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:07:11.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IStatisticsService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IStatisticsService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\IStatisticsService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IStatisticsService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\IStatisticsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:08:39.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ReservationsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationsViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\ReservationsViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationsViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\ReservationsViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAD0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:39:05.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ReservationsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\ReservationsPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\ReservationsPage.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwC8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T12:18:54.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAQwHsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:13:14.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ReservationDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAALoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:21:33.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ReservationDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T12:18:49.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "RegisterPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\RegisterPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\RegisterPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\RegisterPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\RegisterPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:38:31.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TableDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\TableDetailPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\TableDetailPage.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-22T20:33:27.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "TablesPage.xaml",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TablesPage.xaml",
               "RelativeDocumentMoniker": "newRestaurant\\Views\\TablesPage.xaml",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TablesPage.xaml",
               "RelativeToolTip": "newRestaurant\\Views\\TablesPage.xaml",
-              "ViewState": "AgIAACIAAAAAAAAAAAApwDMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-22T20:20:08.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 40,
+              "Title": "CategoryDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoryDetailPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoryDetailPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoryDetailPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\CategoryDetailPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-21T14:36:41.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CategoriesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoriesPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\CategoriesPage.xaml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-21T14:23:31.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "TableDetailViewModel.cs",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\TableDetailViewModel.cs",
               "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\TableDetailViewModel.cs",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\TableDetailViewModel.cs",
               "RelativeToolTip": "newRestaurant\\ViewModels\\TableDetailViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAQwIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T20:52:51.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 43,
+              "Title": "TablesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\TablesViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\TablesViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\TablesViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\TablesViewModel.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:21:25.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\ReservationService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\ReservationService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\ReservationService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAADgvygAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:47:36.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
               "Title": "TableService.cs",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\TableService.cs",
               "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\TableService.cs",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\TableService.cs",
               "RelativeToolTip": "newRestaurant\\Services\\service\\TableService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T20:27:09.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 46,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\CategoryService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\CategoryService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\CategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:16:31.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\CartService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\CartService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\CartService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:09:03.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Table.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\Table.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Table.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\Table.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA8wBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:16:45.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TablesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TablesPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\TablesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TablesPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\TablesPage.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:52:03.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TableDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\TableDetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\TableDetailPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\TableDetailPage.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:33:51.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ReservationsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\ReservationsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\ReservationsPage.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:38:41.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ReservationDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:25:38.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "ITableService.cs",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\ITableService.cs",
               "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\ITableService.cs",
@@ -378,55 +1004,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CategoryDetailViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\CategoryDetailViewModel.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAqwBMAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 54,
+              "Title": "IReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IReservationService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\IReservationService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IReservationService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\IReservationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:53:01.685Z"
+              "WhenOpened": "2025-04-20T20:47:31.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CategoriesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoriesViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\CategoriesViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CategoriesViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\CategoriesViewModel.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAFEAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 55,
+              "Title": "IPlatService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IPlatService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\IPlatService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IPlatService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\IPlatService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:24:11.676Z"
+              "WhenOpened": "2025-04-23T12:08:19.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CategoryDetailPage.xaml",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoryDetailPage.xaml",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoryDetailPage.xaml",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoryDetailPage.xaml",
-              "RelativeToolTip": "newRestaurant\\Views\\CategoryDetailPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 56,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Reservation.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\Reservation.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:07:25.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "PlatDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwE8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:17:40.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "PlatDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\PlatDetailPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\PlatDetailPage.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAwCwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-21T14:36:41.892Z"
+              "WhenOpened": "2025-04-23T12:18:36.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CategoriesPage.xaml",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoriesPage.xaml",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml",
-              "RelativeToolTip": "newRestaurant\\Views\\CategoriesPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABVAAAAAAAAAA==",
+              "DocumentIndex": 58,
+              "Title": "PlatsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\PlatsPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\PlatsPage.xaml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAwEIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-21T14:23:31.686Z"
+              "WhenOpened": "2025-04-23T12:18:43.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 61,
+              "Title": "PlatDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\PlatDetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\PlatDetailPage.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:36:59.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
               "Title": "CategoryDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoryDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoryDetailPage.xaml.cs",
@@ -438,271 +1100,270 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:07:00.96Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CartViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CartViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\CartViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\CartViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\CartViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAOEAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:44:44.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CartPage.xaml",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\CartPage.xaml",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
-              "RelativeToolTip": "newRestaurant\\Views\\CartPage.xaml",
-              "ViewState": "AgIAAC0AAAAAAAAAAADwv1MAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-22T20:05:10.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Table.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Table.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Models\\Table.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Table.cs",
-              "RelativeToolTip": "newRestaurant\\Models\\Table.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:16:45.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\User.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\User.cs",
-              "RelativeToolTip": "newRestaurant\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:14:59.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CategoriesPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoriesPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\CategoriesPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:23:59.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CartPlat.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\CartPlat.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Models\\CartPlat.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\CartPlat.cs",
-              "RelativeToolTip": "newRestaurant\\Models\\CartPlat.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwA8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:07:31.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Cart.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Models\\Cart.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Cart.cs",
-              "RelativeToolTip": "newRestaurant\\Models\\Cart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:07:36.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CartPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\CartPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\CartPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:36:03.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Category.cs",
-              "RelativeToolTip": "newRestaurant\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T20:09:20.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "RegisterPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\RegisterPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\RegisterPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\RegisterPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\RegisterPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:38:31.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "PlatsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\PlatsViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\PlatsViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\PlatsViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\PlatsViewModel.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:38:03.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "PlatDetailPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\PlatDetailPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\PlatDetailPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:36:59.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:36:55.258Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ReservationsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationsViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\ReservationsViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationsViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\ReservationsViewModel.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAUwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:39:05.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ReservationsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\ReservationsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\ReservationsPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:38:41.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ReservationDetailPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
-              "RelativeToolTip": "newRestaurant\\Views\\ReservationDetailPage.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:25:38.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 60,
               "Title": "PlatsPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml.cs",
               "RelativeDocumentMoniker": "newRestaurant\\Views\\PlatsPage.xaml.cs",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml.cs",
               "RelativeToolTip": "newRestaurant\\Views\\PlatsPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T14:36:22.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 63,
+              "Title": "CategoriesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\CategoriesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CategoriesPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\CategoriesPage.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:23:59.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "CartPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\CartPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\CartPage.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:36:03.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "PlatService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\PlatService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\PlatService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\PlatService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\PlatService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:16:37.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\ICategoryService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:08:14.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\ICartService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\ICartService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\ICartService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\ICartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:08:01.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Category.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\Category.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:09:20.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "CartPlat.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\CartPlat.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\CartPlat.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\CartPlat.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\CartPlat.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA8wB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:07:31.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\Cart.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\Cart.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA8wCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:07:36.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "RegisterPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\RegisterPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\RegisterPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\RegisterPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\RegisterPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T12:13:46.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "newRestaurant\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-20T20:08:07.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IAuthService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IAuthService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\interface\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:07:55.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\AuthService.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\AuthService.cs",
+              "RelativeToolTip": "newRestaurant\\Services\\service\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T12:08:57.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:06:37.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Views\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "newRestaurant\\Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:36:55.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\User.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Models\\User.cs",
+              "RelativeToolTip": "newRestaurant\\Models\\User.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA6wCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:14:59.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "Microsoft.Maui.Resizetizer.After.targets",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "RelativeDocumentMoniker": "..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "ToolTip": "C:\\Users\\hodaifa\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "RelativeToolTip": "..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "ViewState": "AgIAAHYDAAAAAAAAAAAgwIIDAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-23T13:25:36.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "newRestaurant\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAxwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:07:00.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\.nuget\\packages\\communitytoolkit.maui\\9.1.1\\ReadMe.txt",
+              "RelativeDocumentMoniker": "..\\..\\.nuget\\packages\\communitytoolkit.maui\\9.1.1\\ReadMe.txt",
+              "ToolTip": "C:\\Users\\hodaifa\\.nuget\\packages\\communitytoolkit.maui\\9.1.1\\ReadMe.txt",
+              "RelativeToolTip": "..\\..\\.nuget\\packages\\communitytoolkit.maui\\9.1.1\\ReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-23T13:05:01.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MainPage.xaml",
+              "RelativeDocumentMoniker": "newRestaurant\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MainPage.xaml",
+              "RelativeToolTip": "newRestaurant\\MainPage.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-20T20:16:31.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "20250422214114_intialmigration.cs",
+              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
+              "RelativeDocumentMoniker": "newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
+              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
+              "RelativeToolTip": "newRestaurant\\Migrations\\20250422214114_intialmigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:41:14.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
               "Title": "CartPage.xaml",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
               "RelativeDocumentMoniker": "newRestaurant\\Views\\CartPage.xaml",
               "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
               "RelativeToolTip": "newRestaurant\\Views\\CartPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-21T14:35:59.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IReservationService.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Services\\interface\\IReservationService.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\interface\\IReservationService.cs",
-              "RelativeToolTip": "newRestaurant\\Services\\interface\\IReservationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:47:31.202Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\ReservationService.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Services\\service\\ReservationService.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\service\\ReservationService.cs",
-              "RelativeToolTip": "newRestaurant\\Services\\service\\ReservationService.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:47:36.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ReservationDetailViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAmwOwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:21:33.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 84,
               "Title": "App.g.i.cs",
               "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
               "RelativeDocumentMoniker": "newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
@@ -714,73 +1375,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MainPage.xaml",
-              "RelativeDocumentMoniker": "newRestaurant\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\MainPage.xaml",
-              "RelativeToolTip": "newRestaurant\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-20T20:16:31.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MauiNavigationService.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\MauiNavigationService.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Services\\MauiNavigationService.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\MauiNavigationService.cs",
-              "RelativeToolTip": "newRestaurant\\Services\\MauiNavigationService.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAADwv3QAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:16:23.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "INavigationService.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\INavigationService.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\Services\\INavigationService.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Services\\INavigationService.cs",
-              "RelativeToolTip": "newRestaurant\\Services\\INavigationService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:12:48.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "newRestaurant\\Views\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\Views\\LoginPage.xaml",
-              "RelativeToolTip": "newRestaurant\\Views\\LoginPage.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwBkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-20T20:08:07.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "newRestaurant\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\hodaifa\\Desktop\\newRestaurant\\newRestaurant\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "newRestaurant\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEoAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:06:37.678Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 85,
               "Title": "Views_LoginPage.xaml.sg.cs",
               "DocumentMoniker": "C:\\Users\\khWinVm\\AppData\\Local\\Temp\\.vsdbgsrc\\10559f5d1209981416bb41c7742adb23e2802b5a\\Views_LoginPage.xaml.sg.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\khWinVm\\AppData\\Local\\Temp\\.vsdbgsrc\\10559f5d1209981416bb41c7742adb23e2802b5a\\Views_LoginPage.xaml.sg.cs",
               "ToolTip": "C:\\Users\\khWinVm\\AppData\\Local\\Temp\\.vsdbgsrc\\10559f5d1209981416bb41c7742adb23e2802b5a\\Views_LoginPage.xaml.sg.cs",
               "RelativeToolTip": "..\\..\\..\\khWinVm\\AppData\\Local\\Temp\\.vsdbgsrc\\10559f5d1209981416bb41c7742adb23e2802b5a\\Views_LoginPage.xaml.sg.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T18:58:05.66Z"
             }

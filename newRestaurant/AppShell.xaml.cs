@@ -168,7 +168,7 @@ namespace newRestaurant
             // Auth Pages
             Routing.RegisterRoute($"//{nameof(LoginPage)}", typeof(LoginPage)); // Absolute route
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage)); // Relative route
-
+            Routing.RegisterRoute(nameof(UserProfilePage), typeof(UserProfilePage));
             // AppShell itself (for absolute navigation back to the shell's root)
             Routing.RegisterRoute($"//{nameof(AppShell)}", typeof(AppShell));
 

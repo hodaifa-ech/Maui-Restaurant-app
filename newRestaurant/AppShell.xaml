@@ -35,6 +35,14 @@
         ContentTemplate="{DataTemplate views:NotificationsPage}"
         Route="NotificationsPage" />
     </FlyoutItem>
+    <FlyoutItem Title="My Account" Icon="profile_icon.png">
+        <!-- Add Icon -->
+        <ShellContent
+        Title="Profile"
+        ContentTemplate="{DataTemplate views:UserProfilePage}"
+        Route="UserProfilePage" />
+        <!-- Could add "Change Password", "Order History" here too -->
+    </FlyoutItem>
     <FlyoutItem Title="Orders and Reservations" Icon="cart_icon.png">
         <ShellContent
             Title="My Cart"
@@ -59,6 +67,7 @@
     <ShellContent Route="CategoryDetailPage" ContentTemplate="{DataTemplate views:CategoryDetailPage}" IsVisible="False"/>
     <ShellContent Route="PlatDetailPage" ContentTemplate="{DataTemplate views:PlatDetailPage}" IsVisible="False"/>
     <!-- ADDED -->
+    <ShellContent Route="UserProfilePage" ContentTemplate="{DataTemplate views:UserProfilePage}" IsVisible="False"/>
     <ShellContent Route="ReservationDetailPage" ContentTemplate="{DataTemplate views:ReservationDetailPage}" IsVisible="False"/>
     <ShellContent Route="TableDetailPage" ContentTemplate="{DataTemplate views:TableDetailPage}" IsVisible="False"/>
     <!-- ADDED -->

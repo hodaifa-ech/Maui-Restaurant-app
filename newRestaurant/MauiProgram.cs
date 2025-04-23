@@ -51,6 +51,7 @@ namespace newRestaurant
             builder.Services.AddSingleton<IAuthService, AuthService>();
             builder.Services.AddScoped<IStatisticsService, StatisticsService>();
             builder.Services.AddScoped<INotificationService, NotificationService>();
+            
             // --- Register ViewModels ---
             // (Ensure these inject the NEW specific service interfaces)
             builder.Services.AddTransient<CategoriesViewModel>();
@@ -61,6 +62,7 @@ namespace newRestaurant
             builder.Services.AddTransient<ReservationDetailViewModel>();
             builder.Services.AddSingleton<CartViewModel>();
             builder.Services.AddTransient<StatisticsViewModel>();
+            builder.Services.AddTransient<UserProfileViewModel>();
             //builder.Services.AddTransient<LoginViewModel>(); // Register if using
             //builder.Services.AddTransient<StatisticsViewModel>(); // Register if using
             builder.Services.AddTransient<TablesViewModel>(); // <-- ADD
@@ -78,6 +80,8 @@ namespace newRestaurant
             builder.Services.AddTransient<CartPage>();
             builder.Services.AddTransient<StatisticsPage>();
             builder.Services.AddTransient<NotificationsPage>();
+            builder.Services.AddTransient<UserProfilePage>(); // Add this
+
             //builder.Services.AddTransient<LoginPage>(); // Register if using
             //builder.Services.AddTransient<StatisticsPage>(); // Register if using
             builder.Services.AddTransient<TablesPage>(); // <-- ADD
