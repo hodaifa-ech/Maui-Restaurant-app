@@ -64,6 +64,7 @@
 	<ItemGroup>
 		<!-- ... other packages ... -->
 		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
 		<!-- Use latest stable 8.0.x -->
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.4" />

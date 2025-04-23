@@ -12,33 +12,41 @@
             <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Fill"/>
 
             <Label Text="Dish Name:"/>
-            <Entry Text="{Binding PlatName}" Placeholder="Enter dish name"/>
+            <!-- *** MODIFIED: Bind IsEnabled *** -->
+            <Entry Text="{Binding PlatName}" Placeholder="Enter dish name" IsEnabled="{Binding CanManagePlats}"/>
 
             <Label Text="Description:"/>
-            <Editor Text="{Binding PlatDescription}" Placeholder="Enter description (optional)" HeightRequest="100"/>
+            <!-- *** MODIFIED: Bind IsEnabled *** -->
+            <Editor Text="{Binding PlatDescription}" Placeholder="Enter description (optional)" HeightRequest="100" IsEnabled="{Binding CanManagePlats}"/>
 
             <Label Text="Price:"/>
-            <Entry Text="{Binding PlatPrice}" Keyboard="Numeric" Placeholder="Enter price"/>
+            <!-- *** MODIFIED: Bind IsEnabled *** -->
+            <Entry Text="{Binding PlatPrice}" Keyboard="Numeric" Placeholder="Enter price" IsEnabled="{Binding CanManagePlats}"/>
 
             <Label Text="Category:"/>
+            <!-- *** MODIFIED: Bind IsEnabled *** -->
             <Picker ItemsSource="{Binding Categories}"
                     SelectedItem="{Binding SelectedCategory}"
                     ItemDisplayBinding="{Binding Name}"
-                    Title="Select a Category"/>
+                    Title="Select a Category"
+                    IsEnabled="{Binding CanManagePlats}"/>
 
+            <!-- *** MODIFIED: Bind IsVisible (using CanExecute is also an option for IsEnabled) *** -->
             <Button Text="Save Dish"
                     Command="{Binding SavePlatCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
+                    IsVisible="{Binding CanManagePlats}"
                     Margin="0,20,0,0"/>
 
+            <!-- *** MODIFIED: Bind IsVisible *** -->
             <Button Text="Delete Dish"
                     Command="{Binding DeletePlatCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    IsVisible="{Binding IsExistingPlat}"
-                    BackgroundColor="Red" TextColor="White"
+                    IsVisible="{Binding CanManagePlats}"
+                    IsEnabled="{Binding IsExistingPlat}"
+                BackgroundColor="Red" TextColor="White"
                     Margin="0,10,0,0"/>
 
-            <Button Text="Cancel"
+                <!-- Cancel button always visible -->
+                <Button Text="Cancel"
                     Command="{Binding GoBackCommand}"
                     IsEnabled="{Binding IsNotBusy}"
                     Margin="0,10,0,0"/>

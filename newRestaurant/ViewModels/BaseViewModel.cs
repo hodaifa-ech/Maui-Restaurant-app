@@ -17,5 +17,6 @@ namespace newRestaurant.ViewModels
         private string _title = string.Empty;
 
         public bool IsNotBusy => !_isBusy;
+
     }
 }

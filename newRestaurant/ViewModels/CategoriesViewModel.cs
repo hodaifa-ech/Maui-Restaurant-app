@@ -3,32 +3,57 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using newRestaurant.Models;
 using newRestaurant.Services;
-using newRestaurant.Services.Interfaces;
-using newRestaurant.Views; // Needed for nameof page navigation
+using newRestaurant.Services.Interfaces; // Use interfaces
+using newRestaurant.Views;
 using System.Collections.ObjectModel;
-using System.Diagnostics; // For Debug.WriteLine
+using System.ComponentModel; // For PropertyChangedEventArgs
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace newRestaurant.ViewModels
 {
     public partial class CategoriesViewModel : BaseViewModel
     {
-
         [ObservableProperty]
         private ObservableCollection<Category> _categories = new();
 
         [ObservableProperty]
-        private Category _selectedCategory; // Used for selection handling
+        [NotifyCanExecuteChangedFor(nameof(GoToCategoryDetailCommand))]
+        private Category _selectedCategory;
 
-        private readonly ICategoryService _categoryService; // ADD
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(AddCategoryCommand))]
+        [NotifyCanExecuteChangedFor(nameof(GoToCategoryDetailCommand))]
+        private bool _canManageCategories;
+
+        private readonly ICategoryService _categoryService;
         private readonly INavigationService _navigationService;
+        private readonly IAuthService _authService;
 
-        public CategoriesViewModel(/*IDataService dataService,*/ ICategoryService categoryService, INavigationService navigationService) // CHANGE
+        public CategoriesViewModel(
+            ICategoryService categoryService,
+            INavigationService navigationService,
+            IAuthService authService)
         {
-            // _dataService = dataService; // REMOVE
-            _categoryService = categoryService; // ADD
+            _categoryService = categoryService;
             _navigationService = navigationService;
-            Title = "Manage Categories";
+            _authService = authService;
+            Title = "Categories"; // Default title
+
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateRolePermissions();
+        }
+
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(IAuthService.CurrentUser)) UpdateRolePermissions();
+        }
+
+        private void UpdateRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            _canManageCategories = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+            Title = _canManageCategories ? "Manage Categories" : "View Categories"; // Adjust title
         }
 
         [RelayCommand]
@@ -36,49 +61,32 @@ namespace newRestaurant.ViewModels
         {
             if (IsBusy) return;
             IsBusy = true;
+            UpdateRolePermissions();
             try
             {
                 Categories.Clear();
                 var categoriesList = await _categoryService.GetCategoriesAsync();
-                foreach (var category in categoriesList)
-                {
-                    Categories.Add(category);
-                }
+                foreach (var category in categoriesList) Categories.Add(category);
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading categories: {ex.Message}");
-                // Optionally display an error message to the user
-                await Shell.Current.DisplayAlert("Error", "Failed to load categories.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error loading categories: {ex.Message}"); await Shell.Current.DisplayAlert("Error", "Failed to load categories.", "OK"); }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanAddCategory() => _canManageCategories && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanAddCategory))]
         private async Task AddCategoryAsync()
         {
-            if (IsBusy) return;
-            // Navigate to detail page with no ID (indicating new category)
+            if (!_canManageCategories) return;
             await _navigationService.NavigateToAsync(nameof(CategoryDetailPage));
         }
 
-        [RelayCommand]
+        private bool CanGoToDetail() => _canManageCategories && SelectedCategory != null && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanGoToDetail))]
         private async Task GoToCategoryDetailAsync()
         {
-            if (IsBusy || SelectedCategory == null) return;
-
-            // Navigate to detail page with the selected category's ID
-            await _navigationService.NavigateToAsync(nameof(CategoryDetailPage),
-                new Dictionary<string, object>
-                {
-                    { "CategoryId", SelectedCategory.Id } // Pass ID as parameter
-                });
-
-            // Deselect item after navigation (handled in OnAppearing of list page now)
-            // SelectedCategory = null;
+            if (!_canManageCategories || SelectedCategory == null) return;
+            await _navigationService.NavigateToAsync(nameof(CategoryDetailPage), new Dictionary<string, object> { { "CategoryId", SelectedCategory.Id } });
         }
+        // TODO: Unsubscribe _authService.PropertyChanged -= AuthService_PropertyChanged;
     }
 }

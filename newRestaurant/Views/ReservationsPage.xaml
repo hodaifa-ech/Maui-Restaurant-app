@@ -6,25 +6,18 @@
              x:Class="newRestaurant.Views.ReservationsPage"
              x:DataType="vm:ReservationsViewModel"
              Title="{Binding Title}">
+    <!-- Title is now dynamic -->
 
     <Grid RowDefinitions="Auto, *, Auto">
-
-        <ActivityIndicator IsVisible="{Binding IsBusy}"
-                           IsRunning="{Binding IsBusy}"
-                           HorizontalOptions="Fill" VerticalOptions="Center"
-                           Grid.RowSpan="3" ZIndex="1"/>
-
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Grid.RowSpan="3" ZIndex="1"/>
         <CollectionView ItemsSource="{Binding Reservations}"
                         SelectionMode="Single"
                         SelectedItem="{Binding SelectedReservation, Mode=TwoWay}"
                         SelectionChangedCommand="{Binding GoToReservationDetailCommand}"
                         Grid.Row="1" Margin="5">
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
-            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Reservation">
-                    <Frame Padding="10" CornerRadius="5" BorderColor="LightGray">
+                    <Frame Padding="10" CornerRadius="5" BorderColor="LightGray" Margin="5">
                         <VerticalStackLayout Spacing="3">
                             <Label FontSize="Medium">
                                 <Label.FormattedText>
@@ -39,7 +32,9 @@
                             </Label>
                             <Label Text="{Binding TimeStart, StringFormat='Start: {0:g}'}" FontSize="Small"/>
                             <Label Text="{Binding TimeEnd, StringFormat='End:   {0:g}'}" FontSize="Small"/>
-                            <Label Text="{Binding User.Username, StringFormat='User: {0}'}" FontSize="Small" TextColor="Gray"/>
+                            <!-- Only show Username if Staff/Admin is viewing -->
+                            <Label Text="{Binding User.Username, StringFormat='User: {0}'}" FontSize="Small" TextColor="Gray"
+                                   IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:ReservationsViewModel}}, Path=IsStaffOrAdmin}"/>
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
@@ -48,11 +43,9 @@
                 <Label Text="No reservations found." HorizontalOptions="Center" VerticalOptions="Center"/>
             </CollectionView.EmptyView>
         </CollectionView>
-
         <Button Text="Add New Reservation"
                 Command="{Binding AddReservationCommand}"
-                IsEnabled="{Binding IsNotBusy}"
-                Margin="20"
-                Grid.Row="2"/>
+                
+            Margin="20" Grid.Row="2"/>
     </Grid>
 </ContentPage>

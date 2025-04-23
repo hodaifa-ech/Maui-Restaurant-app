@@ -3,21 +3,21 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using newRestaurant.Models;
 using newRestaurant.Services;
-
-// using newRestaurant.Services; // Not needed if using interfaces only
-using newRestaurant.Services.Interfaces;
+using newRestaurant.Services.Interfaces; // Use interfaces
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel; // For PropertyChangedEventArgs
 using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace newRestaurant.ViewModels
 {
-    [QueryProperty(nameof(ReservationId), "ReservationId")] // Use property name for QueryProperty
+    [QueryProperty(nameof(ReservationId), "ReservationId")]
     public partial class ReservationDetailViewModel : BaseViewModel
     {
         private int _reservationId;
-        private bool _isInitialLoad = true; // Flag for OnAppearing
+        private bool _isInitialLoad = true;
+        private int _reservationOwnerUserId = -1;
 
         [ObservableProperty] private Table _selectedTable;
         [ObservableProperty] private ObservableCollection<Table> _tables = new();
@@ -27,6 +27,11 @@ namespace newRestaurant.ViewModels
         [ObservableProperty] private ReservationStatus _status = ReservationStatus.Pending;
         [ObservableProperty] private string _userName = "Loading...";
         [ObservableProperty] private bool _isExistingReservation;
+        [ObservableProperty] private bool _isStaffOrAdmin;
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(SaveReservationCommand))]
+        [NotifyCanExecuteChangedFor(nameof(DeleteReservationCommand))]
+        private bool _canManageThisReservation;
 
         private readonly IAuthService _authService;
         private readonly IReservationService _reservationService;
@@ -34,17 +39,10 @@ namespace newRestaurant.ViewModels
         private readonly IUserService _userService;
         private readonly INavigationService _navigationService;
 
-        // Public property for QueryProperty binding
         public int ReservationId
         {
             get => _reservationId;
-            set
-            {
-                SetProperty(ref _reservationId, value);
-                IsExistingReservation = value > 0;
-                // Reset flag so InitializeAsync runs again if ID changes after appearing
-                _isInitialLoad = true;
-            }
+            set { SetProperty(ref _reservationId, value); IsExistingReservation = value > 0; _isInitialLoad = true; }
         }
 
         public ReservationDetailViewModel(
@@ -60,178 +58,130 @@ namespace newRestaurant.ViewModels
             _navigationService = navigationService;
             _authService = authService;
             Title = "Reservation Details";
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateBaseRolePermissions();
         }
 
-        // Renamed from LoadDependenciesAsync - Called from Page's OnAppearing
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(IAuthService.CurrentUser))
+            {
+                UpdateBaseRolePermissions();
+                UpdateDetailedPermissions(_reservationOwnerUserId);
+            }
+        }
+
+        private void UpdateBaseRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            IsStaffOrAdmin = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+        }
+
+        private void UpdateDetailedPermissions(int ownerUserId)
+        {
+            var currentUser = _authService.CurrentUser;
+            if (currentUser == null) CanManageThisReservation = false;
+            else CanManageThisReservation = IsStaffOrAdmin || (ownerUserId > 0 && currentUser.Id == ownerUserId);
+            SaveReservationCommand.NotifyCanExecuteChanged(); // Update command states
+            DeleteReservationCommand.NotifyCanExecuteChanged();
+        }
+
+
         public async Task InitializeAsync()
         {
-            // Prevent multiple loads per appearance/ID change
             if (!_isInitialLoad || IsBusy) return;
-
             IsBusy = true;
+            UpdateBaseRolePermissions();
+            _reservationOwnerUserId = -1;
+            CanManageThisReservation = false; // Default until loaded
+
             try
             {
-                // --- Always Load Tables for Picker ---
-                Tables.Clear(); // Clear before adding
+                Tables.Clear();
                 var tableList = await _tableService.GetTablesAsync();
-                foreach (var table in tableList)
-                {
-                    Tables.Add(table);
-                }
+                foreach (var table in tableList) Tables.Add(table);
 
-                // --- Load Reservation Details or Set Defaults ---
-                if (_reservationId > 0)
+                if (_reservationId > 0) // Existing
                 {
-                    Title = "Edit Reservation";
                     var reservation = await _reservationService.GetReservationAsync(_reservationId);
                     if (reservation != null)
                     {
+                        _reservationOwnerUserId = reservation.UserId;
+                        UpdateDetailedPermissions(_reservationOwnerUserId);
                         SelectedTable = Tables.FirstOrDefault(t => t.Id == reservation.TableId);
-                        SelectedDate = reservation.TimeStart.Date;
-                        StartTime = reservation.TimeStart.TimeOfDay;
-                        EndTime = reservation.TimeEnd.TimeOfDay;
-                        Status = reservation.Status;
-                        UserName = reservation.User?.Username ?? "Unknown";
-                        IsExistingReservation = true; // Redundant but safe
+                        SelectedDate = reservation.TimeStart.Date; StartTime = reservation.TimeStart.TimeOfDay; EndTime = reservation.TimeEnd.TimeOfDay;
+                        Status = reservation.Status; UserName = reservation.User?.Username ?? "Unknown"; IsExistingReservation = true;
+                        Title = CanManageThisReservation ? "Edit Reservation" : "View Reservation";
                     }
-                    else
-                    {
-                        await Shell.Current.DisplayAlert("Error", "Reservation not found.", "OK");
-                        await GoBackAsync();
-                        return; // Exit if not found
-                    }
+                    else { await Shell.Current.DisplayAlert("Error", "Reservation not found.", "OK"); await GoBackAsync(); return; }
                 }
-                else // New Reservation
+                else // New
                 {
-                    Title = "Add New Reservation";
-                    SelectedTable = Tables.FirstOrDefault(); // Set default AFTER loading Tables
-                    SelectedDate = DateTime.Today;
-                    StartTime = TimeSpan.FromHours(DateTime.Now.Hour + 1);
-                    EndTime = StartTime.Add(TimeSpan.FromHours(1));
-                    Status = ReservationStatus.Pending;
-                    IsExistingReservation = false;
                     var currentUser = _authService.CurrentUser;
-                    UserName = currentUser?.Username ?? "Error: Not Logged In";
+                    if (currentUser == null) { await Shell.Current.DisplayAlert("Error", "Not logged in.", "OK"); await GoBackAsync(); return; }
+                    _reservationOwnerUserId = currentUser.Id; UpdateDetailedPermissions(_reservationOwnerUserId);
+                    Title = "Add New Reservation"; SelectedTable = Tables.FirstOrDefault();
+                    SelectedDate = DateTime.Today.AddDays(1); StartTime = TimeSpan.FromHours(18); EndTime = StartTime.Add(TimeSpan.FromHours(2));
+                    Status = ReservationStatus.Pending; IsExistingReservation = false; UserName = currentUser.Username;
+                    if (!CanManageThisReservation) { await Shell.Current.DisplayAlert("Error", "Cannot create reservation.", "OK"); await GoBackAsync(); return; }
                 }
-
-                _isInitialLoad = false; // Mark load as complete for this instance/ID
+                _isInitialLoad = false;
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error initializing ReservationDetailViewModel: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to load reservation details.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error initializing ReservationDetailViewModel: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
-
-        // --- SaveReservationAsync, DeleteReservationAsync, GoBackAsync ---
-        // (These methods remain largely the same, ensure they use _reservationId field)
-        [RelayCommand]
+        private bool CanSave() => CanManageThisReservation && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanSave))]
         private async Task SaveReservationAsync()
         {
+            if (!CanManageThisReservation) return;
             var currentUserId = _authService.CurrentUser?.Id;
-            if (currentUserId == null)
-            {
-                await Shell.Current.DisplayAlert("Error", "You must be logged in.", "OK");
-                return;
-            }
-            if (IsBusy) return;
-
-            DateTime startDateTime = SelectedDate.Date + StartTime;
-            DateTime endDateTime = SelectedDate.Date + EndTime;
-
-            if (SelectedTable == null) { /* Validation */ return; }
-            if (endDateTime <= startDateTime) { /* Validation */ return; }
-            if (startDateTime < DateTime.Now && _reservationId == 0) { /* Validation */ return; }
-
-            IsBusy = true;
-            bool success = false;
+            int userIdToSave = IsExistingReservation ? _reservationOwnerUserId : currentUserId ?? -1;
+            if (userIdToSave <= 0) { await Shell.Current.DisplayAlert("Error", "User info missing.", "OK"); return; }
+            DateTime startDateTime = SelectedDate.Date + StartTime; DateTime endDateTime = SelectedDate.Date + EndTime;
+            if (SelectedTable == null || endDateTime <= startDateTime || (startDateTime < DateTime.Now && !IsExistingReservation)) { await Shell.Current.DisplayAlert("Validation Error", "Invalid table or times.", "OK"); return; }
+            IsBusy = true; bool success = false;
             try
             {
-                // Create a NEW object for saving, especially important if updating
                 Reservation reservationToSave = new Reservation
                 {
                     Id = _reservationId,
                     TableId = SelectedTable.Id,
-                    UserId = currentUserId.Value,
+                    UserId = userIdToSave,
                     TimeStart = startDateTime,
                     TimeEnd = endDateTime,
-                    Status = IsExistingReservation ? Status : ReservationStatus.Pending
+                    Status = (IsExistingReservation && IsStaffOrAdmin) ? Status : (IsExistingReservation ? (await _reservationService.GetReservationAsync(_reservationId)).Status : ReservationStatus.Pending)
                 };
-
-                if (IsExistingReservation)
-                {
-                    // Ensure UpdateReservationAsync handles finding/updating correctly
-                    success = await _reservationService.UpdateReservationAsync(reservationToSave);
-                }
-                else
-                {
-                    reservationToSave.Id = 0; // Ensure 0 for add
-                    success = await _reservationService.AddReservationAsync(reservationToSave);
-                }
-
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Reservation saved.", "OK");
-                    await GoBackAsync();
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "Failed to save reservation. Check conflicts/logs.", "OK");
-                }
+                if (IsExistingReservation) success = await _reservationService.UpdateReservationAsync(reservationToSave);
+                else success = await _reservationService.AddReservationAsync(reservationToSave);
+                if (success) { await Shell.Current.DisplayAlert("Success", "Reservation saved.", "OK"); await GoBackAsync(); }
+                else { await Shell.Current.DisplayAlert("Error", "Failed to save reservation (Overlap?).", "OK"); }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error saving reservation: {ex}");
-                await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error saving reservation: {ex}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanDelete() => CanManageThisReservation && IsExistingReservation && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanDelete))]
         private async Task DeleteReservationAsync()
         {
-            if (IsBusy || !IsExistingReservation) return;
-
+            if (!CanManageThisReservation || !IsExistingReservation) return;
             bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", "Delete this reservation?", "Yes", "No");
             if (!confirm) return;
-
             IsBusy = true;
             try
             {
                 bool success = await _reservationService.DeleteReservationAsync(_reservationId);
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Reservation deleted.", "OK");
-                    await GoBackAsync();
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "Failed to delete reservation.", "OK");
-                }
+                if (success) { await Shell.Current.DisplayAlert("Success", "Reservation deleted.", "OK"); await GoBackAsync(); }
+                else { await Shell.Current.DisplayAlert("Error", "Failed to delete reservation.", "OK"); }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error deleting reservation: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error deleting reservation: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
         [RelayCommand]
-        private async Task GoBackAsync()
-        {
-            await _navigationService.GoBackAsync();
-        }
+        private async Task GoBackAsync() { if (IsBusy) return; await _navigationService.GoBackAsync(); }
+        // TODO: Unsubscribe _authService.PropertyChanged -= AuthService_PropertyChanged;
     }
 }

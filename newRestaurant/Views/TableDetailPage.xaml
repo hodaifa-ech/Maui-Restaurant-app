@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<!-- Views/TableDetailPage.xaml -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:newRestaurant.ViewModels"
@@ -9,29 +9,13 @@
     <ScrollView>
         <VerticalStackLayout Spacing="10" Padding="20">
             <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Fill"/>
-
             <Label Text="Table Number:"/>
-            <Entry Text="{Binding TableNumber}" Placeholder="Enter table number (e.g., T1, A5)" MaxLength="50"/>
-
+            <Entry Text="{Binding TableNumber}" Placeholder="Enter table number (e.g., T1, A5)" MaxLength="50" IsEnabled="{Binding CanManageTables}"/>
             <Label Text="Capacity:"/>
-            <Entry Text="{Binding Capacity}" Keyboard="Numeric" Placeholder="Enter number of seats"/>
-
-            <Button Text="Save Table"
-                    Command="{Binding SaveTableCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    Margin="0,20,0,0"/>
-
-            <Button Text="Delete Table"
-                    Command="{Binding DeleteTableCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    IsVisible="{Binding IsExistingTable}"
-                    BackgroundColor="Red" TextColor="White"
-                    Margin="0,10,0,0"/>
-
-            <Button Text="Cancel"
-                    Command="{Binding GoBackCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    Margin="0,10,0,0"/>
+            <Entry Text="{Binding Capacity}" Keyboard="Numeric" Placeholder="Enter number of seats" IsEnabled="{Binding CanManageTables}"/>
+            <Button Text="Save Table" Command="{Binding SaveTableCommand}" IsVisible="{Binding CanManageTables}" Margin="0,20,0,0"/>
+            <Button Text="Delete Table" Command="{Binding DeleteTableCommand}" IsVisible="{Binding CanManageTables}" IsEnabled="{Binding IsExistingTable}" BackgroundColor="Red" TextColor="White" Margin="0,10,0,0"/>
+            <Button Text="Cancel" Command="{Binding GoBackCommand}" IsEnabled="{Binding IsNotBusy}" Margin="0,10,0,0"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

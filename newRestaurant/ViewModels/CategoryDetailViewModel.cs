@@ -2,187 +2,134 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using newRestaurant.Models;
-using newRestaurant.Models;
 using newRestaurant.Services;
-using newRestaurant.Services;
-using newRestaurant.Services.Interfaces;
-using newRestaurant.ViewModels;
+using newRestaurant.Services.Interfaces; // Use Interfaces
+using System.ComponentModel; // For PropertyChangedEventArgs
 using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace newRestaurant.ViewModels
 {
-    // This attribute links the QueryProperty "CategoryId" from navigation parameters
-    // to the CategoryId property in this ViewModel.
     [QueryProperty(nameof(CategoryId), "CategoryId")]
     public partial class CategoryDetailViewModel : BaseViewModel
     {
-       
-        private int _categoryId; // Backing field for the query property
+        private int _categoryId;
+        private bool _isInitialLoad = true;
 
+        [ObservableProperty] private string _categoryName;
+        [ObservableProperty] private bool _isExistingCategory;
         [ObservableProperty]
-        private string _categoryName;
+        [NotifyCanExecuteChangedFor(nameof(SaveCategoryCommand))]
+        [NotifyCanExecuteChangedFor(nameof(DeleteCategoryCommand))]
+        private bool _canManageCategories;
 
-        [ObservableProperty]
-        private bool _isExistingCategory; // To control UI elements like Delete button
-
-        // This property receives the value from the navigation parameter
         public int CategoryId
         {
             get => _categoryId;
-            set
-            {
-                SetProperty(ref _categoryId, value);
-                IsExistingCategory = value > 0; // Set flag based on ID
-                if (value > 0)
-                {
-                    // Load existing category data when ID is set
-                    LoadCategoryAsync(value);
-                }
-                else
-                {
-                    // Prepare for new category entry
-                    Title = "Add New Category";
-                    CategoryName = string.Empty;
-                }
-            }
+            set { SetProperty(ref _categoryId, value); IsExistingCategory = value > 0; _isInitialLoad = true; }
         }
 
-        private readonly ICategoryService _categoryService; // ADD
+        private readonly ICategoryService _categoryService;
         private readonly INavigationService _navigationService;
+        private readonly IAuthService _authService;
 
-        public CategoryDetailViewModel(/*IDataService dataService,*/ ICategoryService categoryService, INavigationService navigationService) // CHANGE
+        public CategoryDetailViewModel(
+            ICategoryService categoryService,
+            INavigationService navigationService,
+            IAuthService authService)
         {
-            // _categoryService = dataService; // REMOVE
-            _categoryService = categoryService; // ADD
+            _categoryService = categoryService;
             _navigationService = navigationService;
+            _authService = authService;
             Title = "Category Details";
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateRolePermissions();
         }
 
-        private async Task LoadCategoryAsync(int categoryId)
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (IsBusy) return;
+            if (e.PropertyName == nameof(IAuthService.CurrentUser)) UpdateRolePermissions();
+        }
+
+        private void UpdateRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            _canManageCategories = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+            SaveCategoryCommand.NotifyCanExecuteChanged();
+            DeleteCategoryCommand.NotifyCanExecuteChanged();
+        }
+
+        public async Task InitializeAsync()
+        {
+            if (!_isInitialLoad || IsBusy) return;
             IsBusy = true;
+            UpdateRolePermissions();
+
+            if (_categoryId == 0 && !_canManageCategories)
+            {
+                await Shell.Current.DisplayAlert("Access Denied", "You cannot add categories.", "OK");
+                await GoBackAsync(); IsBusy = false; return;
+            }
+
             try
             {
-                var category = await _categoryService.GetCategoryAsync(categoryId);
-                if (category != null)
+                if (_categoryId > 0)
                 {
-                    CategoryName = category.Name;
-                    Title = $"Edit: {category.Name}";
-                    IsExistingCategory = true;
+                    var category = await _categoryService.GetCategoryAsync(_categoryId);
+                    if (category != null)
+                    {
+                        CategoryName = category.Name; IsExistingCategory = true;
+                        Title = _canManageCategories ? $"Edit: {category.Name}" : $"View: {category.Name}";
+                    }
+                    else { await Shell.Current.DisplayAlert("Error", "Category not found.", "OK"); await GoBackAsync(); return; }
                 }
-                else
-                {
-                    Title = "Add New Category";
-                    IsExistingCategory = false;
-                    await Shell.Current.DisplayAlert("Error", "Category not found.", "OK");
-                    await GoBackAsync(); // Go back if category not found
-                }
+                else { Title = "Add New Category"; CategoryName = string.Empty; IsExistingCategory = false; }
+                _isInitialLoad = false;
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading category: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to load category.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error loading category: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanSaveCategory() => _canManageCategories && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanSaveCategory))]
         private async Task SaveCategoryAsync()
         {
-            if (IsBusy) return;
-            if (string.IsNullOrWhiteSpace(CategoryName))
-            {
-                await Shell.Current.DisplayAlert("Validation Error", "Category name cannot be empty.", "OK");
-                return;
-            }
-
-            IsBusy = true;
-            bool success = false;
+            if (!_canManageCategories) return;
+            if (string.IsNullOrWhiteSpace(CategoryName)) { await Shell.Current.DisplayAlert("Validation Error", "Name required.", "OK"); return; }
+            IsBusy = true; bool success = false;
             try
             {
-                Category category = new Category
-                {
-                    Id = CategoryId, // If 0, it's new; otherwise, it's an update
-                    Name = CategoryName
-                };
-
-                if (IsExistingCategory) // Update
-                {
-                    success = await _categoryService.UpdateCategoryAsync(category);
-                }
-                else // Add New
-                {
-                    // Ensure Id is 0 for adding
-                    category.Id = 0;
-                    success = await _categoryService.AddCategoryAsync(category);
-                }
-
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Category saved successfully.", "OK");
-                    await GoBackAsync(); // Go back to the list page
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "Failed to save category.", "OK");
-                }
+                Category category = new Category { Id = CategoryId, Name = CategoryName };
+                if (IsExistingCategory) success = await _categoryService.UpdateCategoryAsync(category);
+                else success = await _categoryService.AddCategoryAsync(category);
+                if (success) { await Shell.Current.DisplayAlert("Success", "Category saved.", "OK"); await GoBackAsync(); }
+                else { await Shell.Current.DisplayAlert("Error", "Failed to save category.", "OK"); }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error saving category: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error saving category: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanDeleteCategory() => _canManageCategories && IsExistingCategory && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanDeleteCategory))]
         private async Task DeleteCategoryAsync()
         {
-            if (IsBusy || !IsExistingCategory) return;
-
-            bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", $"Are you sure you want to delete the category '{CategoryName}'?", "Yes", "No");
+            if (!_canManageCategories || !IsExistingCategory) return;
+            bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", $"Delete '{CategoryName}'?", "Yes", "No");
             if (!confirm) return;
-
-
             IsBusy = true;
             try
             {
-                // TODO: Add check if category is in use by Plats before deleting
                 bool success = await _categoryService.DeleteCategoryAsync(CategoryId);
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Category deleted.", "OK");
-                    await GoBackAsync();
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "Failed to delete category.", "OK");
-                }
+                // Service layer might show alert on failure (e.g., FK constraint)
+                if (success) { await Shell.Current.DisplayAlert("Success", "Category deleted.", "OK"); await GoBackAsync(); }
+                // else { await Shell.Current.DisplayAlert("Error", "Failed to delete category.", "OK"); }
             }
-            catch (Exception ex) // Catch potential FK constraint errors if not handled in service
-            {
-                Debug.WriteLine($"Error deleting category: {ex.Message}");
-                // Check for specific database exceptions if needed
-                await Shell.Current.DisplayAlert("Error", $"Could not delete category. It might be in use. ({ex.Message})", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error deleting category: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
         [RelayCommand]
-        private async Task GoBackAsync()
-        {
-            await _navigationService.GoBackAsync();
-        }
+        private async Task GoBackAsync() { if (IsBusy) return; await _navigationService.GoBackAsync(); }
+        // TODO: Unsubscribe _authService.PropertyChanged -= AuthService_PropertyChanged;
     }
 }

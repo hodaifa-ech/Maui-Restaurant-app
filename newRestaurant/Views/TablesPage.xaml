@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<!-- Views/TablesPage.xaml -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:newRestaurant.ViewModels"
@@ -6,47 +6,45 @@
              x:Class="newRestaurant.Views.TablesPage"
              x:DataType="vm:TablesViewModel"
              Title="{Binding Title}">
-    <!-- Bind Title -->
+    <!-- Title is now dynamic -->
 
     <Grid RowDefinitions="*, Auto">
-        <!-- Removed Auto row for ActivityIndicator if placed inside -->
-
         <CollectionView ItemsSource="{Binding Tables}"
                         SelectionMode="Single"
                         SelectedItem="{Binding SelectedTable, Mode=TwoWay}"
                         SelectionChangedCommand="{Binding GoToTableDetailCommand}"
-                        Grid.Row="0" Margin="5">
+                        IsEnabled="{Binding CanManageTables}" 
+            Grid.Row="0" Margin="5">
             <CollectionView.Header>
-                <!-- Optional: Header -->
                 <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Table">
-                    <!-- Corrected: Single Frame per item -->
                     <Frame Padding="10" Margin="5" CornerRadius="5" BorderColor="LightGray">
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="{Binding TableNumber}" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
                             <Label Text="{Binding Capacity, StringFormat='(Capacity: {0})'}" FontSize="Small" TextColor="Gray" VerticalOptions="Center"/>
                         </HorizontalStackLayout>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal" />
+                                <VisualState Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="0.5" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.EmptyView>
                 <Label Text="No Tables found." HorizontalOptions="Center" VerticalOptions="Center"/>
             </CollectionView.EmptyView>
-            <CollectionView.Footer>
-                <!-- Optional: Footer -->
-            </CollectionView.Footer>
         </CollectionView>
-
-        <!-- Moved Activity Indicator, you can place it elsewhere if preferred -->
-        <!-- <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" ZIndex="1"/> -->
-
         <Button Text="Add New Table"
                 Command="{Binding AddTableCommand}"
-                IsEnabled="{Binding IsNotBusy}"
-                Margin="20"
-                Grid.Row="1"/>
-        <!-- Set to correct row -->
+                IsVisible="{Binding CanManageTables}" 
+            Margin="20" Grid.Row="1"/>
     </Grid>
 </ContentPage>

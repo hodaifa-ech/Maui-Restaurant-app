@@ -1,10 +1,11 @@
-﻿// using CommunityToolkit.Mvvm.ComponentModel;
+﻿// ViewModels/PlatDetailViewModel.cs
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using newRestaurant.Models;
 using newRestaurant.Services;
 using newRestaurant.Services.Interfaces;
 using System.Collections.ObjectModel;
+using System.ComponentModel; // Required for PropertyChangedEventArgs
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -13,9 +14,8 @@ namespace newRestaurant.ViewModels
     [QueryProperty(nameof(PlatId), "PlatId")]
     public partial class PlatDetailViewModel : BaseViewModel
     {
-        bool _dependenciesLoaded = false;
         private int _platId;
-        private bool _isInitialLoad = true; // Flag for OnAppearing
+        private bool _isInitialLoad = true;
 
         [ObservableProperty] private string _platName;
         [ObservableProperty] private string _platDescription;
@@ -24,160 +24,127 @@ namespace newRestaurant.ViewModels
         [ObservableProperty] private ObservableCollection<Category> _categories = new();
         [ObservableProperty] private bool _isExistingPlat;
 
+        // --- Role-based Property ---
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(SavePlatCommand))]
+        [NotifyCanExecuteChangedFor(nameof(DeletePlatCommand))]
+        private bool _canManagePlats; // True if Staff or Admin
+
+
         private readonly IPlatService _platService;
         private readonly ICategoryService _categoryService;
         private readonly INavigationService _navigationService;
+        private readonly IAuthService _authService; // *** ADDED ***
 
         public int PlatId
         {
             get => _platId;
             set
             {
-                // Set property but defer loading to OnAppearing or explicit call
                 SetProperty(ref _platId, value);
                 IsExistingPlat = value > 0;
-                // Reset initial load flag if ID changes after first appearance
-                _isInitialLoad = true;
+                _isInitialLoad = true; // Reset flag if ID changes
             }
         }
 
-        public PlatDetailViewModel(IPlatService platService, ICategoryService categoryService, INavigationService navigationService)
+        public PlatDetailViewModel(
+            IPlatService platService,
+            ICategoryService categoryService,
+            INavigationService navigationService,
+            IAuthService authService) // *** ADDED ***
         {
             _platService = platService;
             _categoryService = categoryService;
             _navigationService = navigationService;
-            Title = "Dish Details";
+            _authService = authService; // *** ADDED ***
+            Title = "Dish Details"; // Initial title
+
+            // *** ADDED: Listen and set initial role ***
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateRolePermissions();
         }
 
-        // --- NEW Method to call from OnAppearing ---
+        // *** ADDED: Handle Auth Changes ***
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(IAuthService.CurrentUser))
+            {
+                UpdateRolePermissions();
+            }
+        }
+
+        // *** ADDED: Update role property ***
+        private void UpdateRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            _canManagePlats = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+            // Debug.WriteLine($"PlatDetailViewModel: User Role = {user?.Role}, CanManagePlats = {CanManagePlats}");
+            // Maybe force UI update for fields if role changes while viewing?
+            OnPropertyChanged(nameof(_canManagePlats));
+        }
+
         public async Task InitializeAsync()
         {
-            // Only run the full load logic once per instance or when PlatId changes
-            if (!_isInitialLoad) return;
-            if (IsBusy) return; // Prevent re-entrancy if already loading
+            if (!_isInitialLoad || IsBusy) return;
 
             IsBusy = true;
+            // Ensure role permissions are current before loading/displaying
+            UpdateRolePermissions();
             try
             {
-                // --- Load Categories ---
-                Categories.Clear(); // Clear before adding
-                var categoryList = await _categoryService.GetCategoriesAsync();
-                foreach (var cat in categoryList)
-                {
-                    Categories.Add(cat);
-                }
-
-                // --- Load Plat or Set Defaults ---
-                if (_platId > 0)
-                {
-                    Title = "Edit Dish";
-                    var plat = await _platService.GetPlatAsync(_platId);
-                    if (plat != null)
-                    {
-                        PlatName = plat.Name;
-                        PlatDescription = plat.Description;
-                        PlatPrice = plat.Price;
-                        SelectedCategory = Categories.FirstOrDefault(c => c.Id == plat.CategoryId);
-                        IsExistingPlat = true; // Redundant but safe
-                    }
-                    else
-                    {
-                        await Shell.Current.DisplayAlert("Error", "Dish not found.", "OK");
-                        await GoBackAsync();
-                        return; // Exit if plat not found
-                    }
-                }
-                else // New Dish
-                {
-                    Title = "Add New Dish";
-                    PlatName = string.Empty;
-                    PlatDescription = string.Empty;
-                    PlatPrice = 0.0m;
-                    SelectedCategory = Categories.FirstOrDefault(); // Set default selection AFTER loading categories
-                    IsExistingPlat = false;
-                }
-
-                _isInitialLoad = false; // Mark initial load as complete
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error initializing PlatDetailViewModel: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to load dish details.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
-        }
-
-        // Combined loading method
-        public async Task LoadDataBasedOnIdAsync()
-        {
-            // Prevent re-entry and multiple loads
-            if (IsBusy || _dependenciesLoaded) return;
-
-            IsBusy = true;
-            try
-            {
-                // --- Always load categories ---
                 Categories.Clear();
                 var categoryList = await _categoryService.GetCategoriesAsync();
-                foreach (var cat in categoryList)
-                {
-                    Categories.Add(cat);
-                }
-                _dependenciesLoaded = true; // Mark dependencies as loaded
+                foreach (var cat in categoryList) Categories.Add(cat);
 
-                // --- Load Plat specific data only if ID exists ---
                 if (_platId > 0)
                 {
-                    Title = "Edit Dish";
+                    // Title updated based on role later if needed
                     var plat = await _platService.GetPlatAsync(_platId);
                     if (plat != null)
                     {
                         PlatName = plat.Name;
                         PlatDescription = plat.Description;
                         PlatPrice = plat.Price;
-                        // Find and set the selected category in the Picker
                         SelectedCategory = Categories.FirstOrDefault(c => c.Id == plat.CategoryId);
-                        // Ensure IsExistingPlat is correctly set (it should be already by setter)
                         IsExistingPlat = true;
+                        Title = _canManagePlats ? $"Edit Dish: {plat.Name}" : $"View Dish: {plat.Name}"; // Title reflects action
                     }
-                    else
-                    {
-                        await Shell.Current.DisplayAlert("Error", "Dish not found.", "OK");
-                        await GoBackAsync();
-                    }
+                    else { /* Handle error */ await GoBackAsync(); return; }
                 }
-                else // New Dish
+                else // New Dish - Should only be reachable by Staff/Admin due to navigation checks now
                 {
                     Title = "Add New Dish";
                     PlatName = string.Empty;
                     PlatDescription = string.Empty;
                     PlatPrice = 0.0m;
-                    // Now Categories are loaded, so this is safe
                     SelectedCategory = Categories.FirstOrDefault();
                     IsExistingPlat = false;
+                    // If somehow a non-staff user reaches here, prevent saving
+                    if (!_canManagePlats)
+                    {
+                        await Shell.Current.DisplayAlert("Access Denied", "You do not have permission to add new dishes.", "OK");
+                        await GoBackAsync();
+                        return;
+                    }
                 }
+                _isInitialLoad = false;
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading dish details/categories: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to load details.", "OK");
-                // Optionally GoBackAsync() on critical load failure
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error initializing PlatDetailViewModel: {ex.Message}"); /* Handle error */ }
+            finally { IsBusy = false; }
         }
 
+        // --- ADDED: CanExecute condition ---
+        private bool CanSaveChanges() => _canManagePlats && !IsBusy;
 
-
-        [RelayCommand]
+        [RelayCommand(CanExecute = nameof(CanSaveChanges))] // *** MODIFIED ***
         private async Task SavePlatAsync()
         {
-            if (IsBusy) return;
+            // Redundant check, but safe:
+            if (!_canManagePlats)
+            {
+                await Shell.Current.DisplayAlert("Access Denied", "You do not have permission to save dishes.", "OK");
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(PlatName) || SelectedCategory == null || PlatPrice <= 0)
             {
@@ -185,92 +152,50 @@ namespace newRestaurant.ViewModels
                 return;
             }
 
-            IsBusy = true;
+            IsBusy = true; // Set IsBusy inside the command execution
             bool success = false;
             try
             {
-                // **IMPORTANT FIX FOR PROBLEM 2**
-                // Create a NEW Plat object for saving, don't reuse the one potentially loaded
                 Plat platToSave = new Plat
                 {
-                    Id = _platId, // Set the ID for update or 0 for add
+                    Id = _platId,
                     Name = PlatName,
                     Description = PlatDescription,
                     Price = PlatPrice,
                     CategoryId = SelectedCategory.Id,
-                    // DO NOT set the Category navigation property here if updating
-                    // Category = SelectedCategory // Avoid this for updates
                 };
 
+                if (IsExistingPlat) success = await _platService.UpdatePlatAsync(platToSave);
+                else success = await _platService.AddPlatAsync(platToSave);
 
-                if (IsExistingPlat)
-                {
-                    // Let EF Core handle tracking based on the ID
-                    success = await _platService.UpdatePlatAsync(platToSave);
-                }
-                else
-                {
-                    platToSave.Id = 0; // Explicitly ensure 0 for add
-                    success = await _platService.AddPlatAsync(platToSave);
-                }
-
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Dish saved successfully.", "OK");
-                    await GoBackAsync();
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "Failed to save dish. Check logs.", "OK");
-                }
+                if (success) { await Shell.Current.DisplayAlert("Success", "Dish saved.", "OK"); await GoBackAsync(); }
+                else { await Shell.Current.DisplayAlert("Error", "Failed to save dish.", "OK"); }
             }
-            catch (Exception ex)
-            {
-                // The InvalidOperationException about tracking might be caught here
-                Debug.WriteLine($"Error saving plat: {ex}"); // Log full exception
-                await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error saving plat: {ex}"); /* Handle error */ }
+            finally { IsBusy = false; }
         }
 
+        // --- ADDED: CanExecute condition ---
+        private bool CanDelete() => _canManagePlats && IsExistingPlat && !IsBusy;
 
-
-
-
-        [RelayCommand]
+        [RelayCommand(CanExecute = nameof(CanDelete))] // *** MODIFIED ***
         private async Task DeletePlatAsync()
         {
-            if (IsBusy || !IsExistingPlat) return;
+            // Redundant check:
+            if (!_canManagePlats || !IsExistingPlat) return;
 
-            bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", $"Are you sure you want to delete '{PlatName}'?", "Yes", "No");
+            bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", $"Delete '{PlatName}'?", "Yes", "No");
             if (!confirm) return;
 
-            IsBusy = true;
+            IsBusy = true; // Set IsBusy inside the command execution
             try
             {
                 bool success = await _platService.DeletePlatAsync(_platId);
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Dish deleted.", "OK");
-                    await GoBackAsync();
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "Failed to delete dish.", "OK");
-                }
+                if (success) { await Shell.Current.DisplayAlert("Success", "Dish deleted.", "OK"); await GoBackAsync(); }
+                else { await Shell.Current.DisplayAlert("Error", "Failed to delete dish.", "OK"); }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error deleting dish: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", $"Could not delete dish. It might be referenced elsewhere. ({ex.Message})", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error deleting dish: {ex.Message}"); /* Handle error */ }
+            finally { IsBusy = false; }
         }
 
         [RelayCommand]
@@ -279,5 +204,7 @@ namespace newRestaurant.ViewModels
             await _navigationService.GoBackAsync();
         }
 
+        // TODO: Remember to unsubscribe
+        // public void Cleanup() { _authService.PropertyChanged -= AuthService_PropertyChanged; }
     }
 }

@@ -5,6 +5,7 @@ using newRestaurant.Models;
 using newRestaurant.Services;
 using newRestaurant.Services.Interfaces;
 using System;
+using System.ComponentModel; // For PropertyChangedEventArgs
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -17,177 +18,116 @@ namespace newRestaurant.ViewModels
         private bool _isInitialLoad = true;
 
         [ObservableProperty] private string _tableNumber;
-        [ObservableProperty] private int _capacity = 4; // Default capacity
+        [ObservableProperty] private int _capacity = 4;
         [ObservableProperty] private bool _isExistingTable;
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(SaveTableCommand))]
+        [NotifyCanExecuteChangedFor(nameof(DeleteTableCommand))]
+        private bool _canManageTables;
 
-        private readonly ITableService _tableService;
-        private readonly INavigationService _navigationService;
-
-        // Public property for QueryProperty binding
         public int TableId
         {
             get => _tableId;
-            set
-            {
-                SetProperty(ref _tableId, value);
-                IsExistingTable = value > 0;
-                _isInitialLoad = true; // Reset flag if ID changes after first appearance
-            }
+            set { SetProperty(ref _tableId, value); IsExistingTable = value > 0; _isInitialLoad = true; }
         }
 
-        public TableDetailViewModel(ITableService tableService, INavigationService navigationService)
+        private readonly ITableService _tableService;
+        private readonly INavigationService _navigationService;
+        private readonly IAuthService _authService;
+
+        public TableDetailViewModel(
+            ITableService tableService,
+            INavigationService navigationService,
+            IAuthService authService)
         {
             _tableService = tableService;
             _navigationService = navigationService;
+            _authService = authService;
             Title = "Table Details";
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateRolePermissions();
         }
 
-        // Called from Page's OnAppearing
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(IAuthService.CurrentUser)) UpdateRolePermissions();
+        }
+
+        private void UpdateRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            CanManageTables = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+            SaveTableCommand.NotifyCanExecuteChanged();
+            DeleteTableCommand.NotifyCanExecuteChanged();
+        }
+
         public async Task InitializeAsync()
         {
             if (!_isInitialLoad || IsBusy) return;
-
             IsBusy = true;
+            UpdateRolePermissions();
+
+            if (!CanManageTables && _tableId == 0)
+            {
+                await Shell.Current.DisplayAlert("Access Denied", "You cannot add tables.", "OK");
+                await GoBackAsync(); IsBusy = false; return;
+            }
+
             try
             {
                 if (_tableId > 0)
                 {
-                    Title = "Edit Table";
+                    Title = CanManageTables ? "Edit Table" : "View Table";
                     var table = await _tableService.GetTableAsync(_tableId);
-                    if (table != null)
-                    {
-                        TableNumber = table.TableNumber;
-                        Capacity = table.Capacity;
-                        IsExistingTable = true; // Redundant but safe
-                    }
-                    else
-                    {
-                        await Shell.Current.DisplayAlert("Error", "Table not found.", "OK");
-                        await GoBackAsync();
-                        return; // Exit if not found
-                    }
+                    if (table != null) { TableNumber = table.TableNumber; Capacity = table.Capacity; IsExistingTable = true; }
+                    else { await Shell.Current.DisplayAlert("Error", "Table not found.", "OK"); await GoBackAsync(); return; }
                 }
-                else // New Table
-                {
-                    Title = "Add New Table";
-                    TableNumber = string.Empty;
-                    Capacity = 4; // Reset to default
-                    IsExistingTable = false;
-                }
-                _isInitialLoad = false; // Mark load as complete
+                else { Title = "Add New Table"; TableNumber = string.Empty; Capacity = 4; IsExistingTable = false; }
+                _isInitialLoad = false;
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error initializing TableDetailViewModel: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to load table details.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error initializing TableDetailViewModel: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanSaveTable() => CanManageTables && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanSaveTable))]
         private async Task SaveTableAsync()
         {
-            if (IsBusy) return;
-
-            // Validation
-            if (string.IsNullOrWhiteSpace(TableNumber))
-            {
-                await Shell.Current.DisplayAlert("Validation Error", "Table Number cannot be empty.", "OK");
-                return;
-            }
-            if (Capacity <= 0)
-            {
-                await Shell.Current.DisplayAlert("Validation Error", "Capacity must be greater than zero.", "OK");
-                return;
-            }
-
-            IsBusy = true;
-            bool success = false;
+            if (!CanManageTables) return;
+            if (string.IsNullOrWhiteSpace(TableNumber) || Capacity <= 0) { await Shell.Current.DisplayAlert("Validation Error", "Valid Number & Capacity required.", "OK"); return; }
+            IsBusy = true; bool success = false;
             try
             {
-                // Create a NEW object for saving/updating
-                Table tableToSave = new Table
-                {
-                    Id = _tableId, // Use the backing field
-                    TableNumber = TableNumber.Trim(), // Trim whitespace
-                    Capacity = Capacity
-                };
-
-                if (IsExistingTable)
-                {
-                    success = await _tableService.UpdateTableAsync(tableToSave);
-                }
-                else
-                {
-                    tableToSave.Id = 0; // Ensure 0 for add
-                    success = await _tableService.AddTableAsync(tableToSave);
-                }
-
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Table saved successfully.", "OK");
-                    await GoBackAsync();
-                }
-                else
-                {
-                    // Service layer might provide more specific errors (e.g., duplicate number)
-                    await Shell.Current.DisplayAlert("Error", "Failed to save table. Check if the Table Number already exists.", "OK");
-                }
+                Table tableToSave = new Table { Id = _tableId, TableNumber = TableNumber.Trim(), Capacity = Capacity };
+                if (IsExistingTable) success = await _tableService.UpdateTableAsync(tableToSave);
+                else success = await _tableService.AddTableAsync(tableToSave);
+                if (success) { await Shell.Current.DisplayAlert("Success", "Table saved.", "OK"); await GoBackAsync(); }
+                else { await Shell.Current.DisplayAlert("Error", "Failed to save table (Number exists?).", "OK"); }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error saving table: {ex}");
-                await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error saving table: {ex}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanDeleteTable() => CanManageTables && IsExistingTable && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanDeleteTable))]
         private async Task DeleteTableAsync()
         {
-            if (IsBusy || !IsExistingTable) return;
-
-            bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", $"Delete Table '{TableNumber}'? This cannot be done if it has active reservations.", "Yes", "No");
+            if (!CanManageTables || !IsExistingTable) return;
+            bool confirm = await Shell.Current.DisplayAlert("Confirm Delete", $"Delete Table '{TableNumber}'?", "Yes", "No");
             if (!confirm) return;
-
             IsBusy = true;
             try
             {
-                // DeleteTableAsync in service now contains the check for reservations
+                // Service layer shows alert on failure (e.g., active reservations)
                 bool success = await _tableService.DeleteTableAsync(_tableId);
-                if (success)
-                {
-                    await Shell.Current.DisplayAlert("Success", "Table deleted.", "OK");
-                    await GoBackAsync();
-                }
-                // If !success, the service layer likely showed an alert already
-                // else
-                // {
-                //    await Shell.Current.DisplayAlert("Error", "Failed to delete table (see console/logs).", "OK");
-                // }
+                if (success) { await Shell.Current.DisplayAlert("Success", "Table deleted.", "OK"); await GoBackAsync(); }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error deleting table: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error deleting table: {ex.Message}"); /* Handle */ }
+            finally { IsBusy = false; }
         }
 
         [RelayCommand]
-        private async Task GoBackAsync()
-        {
-            if (IsBusy) return; // Prevent double navigation
-            await _navigationService.GoBackAsync();
-        }
+        private async Task GoBackAsync() { if (IsBusy) return; await _navigationService.GoBackAsync(); }
+        // TODO: Unsubscribe _authService.PropertyChanged -= AuthService_PropertyChanged;
     }
 }

@@ -13,13 +13,12 @@
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="Fill" VerticalOptions="Center"
                            Grid.RowSpan="3" ZIndex="1"/>
-        <!-- Span all rows and stay on top -->
 
         <CollectionView ItemsSource="{Binding Plats}"
                         SelectionMode="Single"
                         SelectedItem="{Binding SelectedPlat, Mode=TwoWay}"
-                        SelectionChangedCommand="{Binding GoToPlatDetailCommand}"
-                        Grid.Row="1" Margin="5">
+                        
+            Grid.Row="1" Margin="5">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
             </CollectionView.ItemsLayout>
@@ -27,38 +26,46 @@
                 <DataTemplate x:DataType="model:Plat">
                     <Frame Padding="10" CornerRadius="5" BorderColor="LightGray">
                         <Grid ColumnDefinitions="*, Auto, Auto">
-                            <VerticalStackLayout Grid.Column="0">
+                            <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
                                 <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold"/>
                                 <Label Text="{Binding Category.Name}" FontSize="Small" TextColor="Gray"/>
                                 <Label Text="{Binding Price, StringFormat='{0:C}'}" FontSize="Small"/>
-                                <Label Text="{Binding Description}" FontSize="Micro" MaxLines="2"/>
+                                <Label Text="{Binding Description}" FontSize="Micro" MaxLines="2" LineBreakMode="TailTruncation"/>
                             </VerticalStackLayout>
 
+                            <!-- Add to Cart Button (Visible to all logged in?) -->
                             <Button Text="Add to Cart"
                                     Grid.Column="1"
                                     VerticalOptions="Center"
                                     Margin="5,0"
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlatsViewModel}}, Path=AddToCartCommand}"
-                                    CommandParameter="{Binding .}"/>
+                                    CommandParameter="{Binding .}"
+                                    IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type vm:PlatsViewModel}}, Path=IsNotBusy}"/>
+                            <!-- Optional: Hide for Staff? IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:PlatsViewModel}}, Path=CanManagePlats, Converter={StaticResource InverseBoolConverter}}" -->
 
-                            <!-- Optional: Edit Button -->
+
+                            <!-- Edit Button (Staff/Admin Only) -->
                             <Button Text="Edit"
                                     Grid.Column="2"
                                     VerticalOptions="Center"
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlatsViewModel}}, Path=GoToPlatDetailCommand}"
-                                    CommandParameter="{Binding .}"/>
+                                    CommandParameter="{Binding .}"
+                                    IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:PlatsViewModel}}, Path=CanManagePlats}"
+                                    IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type vm:PlatsViewModel}}, Path=IsNotBusy}"/>
                         </Grid>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.EmptyView>
-                <Label Text="No dishes found. Add some!" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="No dishes found." HorizontalOptions="Center" VerticalOptions="Center"/>
             </CollectionView.EmptyView>
         </CollectionView>
 
+        <!-- Add New Dish Button (Staff/Admin Only) -->
         <Button Text="Add New Dish"
                 Command="{Binding AddPlatCommand}"
-                IsEnabled="{Binding IsNotBusy}"
+                
+            IsVisible="{Binding CanManagePlats}"
                 Margin="20"
                 Grid.Row="2"/>
     </Grid>

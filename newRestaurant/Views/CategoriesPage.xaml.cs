@@ -21,6 +21,7 @@ public partial class CategoriesPage : ContentPage
             await vm.LoadCategoriesCommand.ExecuteAsync(null);
             vm.SelectedCategory = null;
 
+
         }
        
     }

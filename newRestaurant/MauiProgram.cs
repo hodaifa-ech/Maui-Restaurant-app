@@ -6,6 +6,7 @@ using newRestaurant.Services;
 using newRestaurant.Services.Interfaces;
 using newRestaurant.ViewModels;
 using newRestaurant.Views;
+using CommunityToolkit.Maui;
 
 namespace newRestaurant
 {
@@ -16,33 +17,28 @@ namespace newRestaurant
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+            builder.UseMauiApp<App>().ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            }).UseMauiCommunityToolkit();
             // --- Database Context Registration ---
             const string server = "localhost"; // YOUR IP
             const string port = "3306";
-            const string database = "amine";      // YOUR DB NAME
-            const string user = "root";          // YOUR USER
-            const string password = "";   // YOUR PASSWORD
+            const string database = "amine"; // YOUR DB NAME
+            const string user = "root"; // YOUR USER
+            const string password = ""; // YOUR PASSWORD
             string connectionString = $"Server={server};Port={port};Database={database};Uid={user};Pwd={password};";
             Console.WriteLine($"[Runtime] Configuring DbContext for MySQL Database: {database} on Server: {server}");
             builder.Services.AddDbContext<RestaurantDbContext>(options =>
             {
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 #if DEBUG
-                // options.LogTo(Console.WriteLine, LogLevel.Information).EnableSensitiveDataLogging();
+            // options.LogTo(Console.WriteLine, LogLevel.Information).EnableSensitiveDataLogging();
 #endif
             });
-
-
             // --- Register Services ---
             builder.Services.AddSingleton<INavigationService, MauiNavigationService>(); // Keep Navigation Service as is
-
             // Register NEW model-specific services (Scoped is good practice with Scoped DbContext)
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IPlatService, PlatService>();
@@ -50,14 +46,9 @@ namespace newRestaurant
             builder.Services.AddScoped<ITableService, TableService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICartService, CartService>();
-
             builder.Services.AddScoped<IStatisticsService, StatisticsService>();
             // REMOVED: builder.Services.AddScoped<IDataService, MySqlDataService>();
-
-
             builder.Services.AddSingleton<IAuthService, AuthService>();
-
-
             // --- Register ViewModels ---
             // (Ensure these inject the NEW specific service interfaces)
             builder.Services.AddTransient<CategoriesViewModel>();
@@ -73,7 +64,6 @@ namespace newRestaurant
             builder.Services.AddTransient<TableDetailViewModel>(); // <-- ADD
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<RegisterViewModel>();
-
             // --- Register Views ---
             builder.Services.AddTransient<CategoriesPage>();
             builder.Services.AddTransient<CategoryDetailPage>();
@@ -88,18 +78,12 @@ namespace newRestaurant
             builder.Services.AddTransient<TableDetailPage>(); // <-- ADD
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<RegisterPage>();
-
             builder.Services.AddSingleton<AppShell>();
-
-
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-
             var app = builder.Build();
             Services = app.Services; // Assign the provider after building
-
-
             // --- Apply Migrations (remains the same) ---
             try
             {
@@ -109,8 +93,8 @@ namespace newRestaurant
                     Console.WriteLine("[Runtime] Testing database connection...");
                     var canConnect = dbContext.Database.CanConnect();
                     Console.WriteLine($"[Runtime] Can connect: {canConnect}");
-                    if (!canConnect) throw new Exception("Cannot connect to the database.");
-
+                    if (!canConnect)
+                        throw new Exception("Cannot connect to the database.");
                     Console.WriteLine("[Runtime] Applying migrations...");
                     dbContext.Database.Migrate();
                     Console.WriteLine("[Runtime] Database migrations checked/applied successfully.");

@@ -8,25 +8,10 @@
 
     <VerticalStackLayout Spacing="10" Padding="20">
         <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
-
         <Label Text="Category Name:"/>
-        <Entry Text="{Binding CategoryName, Mode=TwoWay}" Placeholder="Enter category name"/>
-
-        <Button Text="Save Category"
-                Command="{Binding SaveCategoryCommand}"
-                IsEnabled="{Binding IsNotBusy}"
-                Margin="0,20,0,0"/>
-
-        <Button Text="Delete Category"
-                Command="{Binding DeleteCategoryCommand}"
-                IsEnabled="{Binding IsNotBusy}"
-                IsVisible="{Binding IsExistingCategory}" 
-            BackgroundColor="Red" TextColor="White"
-                Margin="0,10,0,0"/>
-
-            <Button Text="Cancel"
-                Command="{Binding GoBackCommand}"
-                IsEnabled="{Binding IsNotBusy}"
-                Margin="0,10,0,0"/>
+        <Entry Text="{Binding CategoryName, Mode=TwoWay}" Placeholder="Enter category name" IsEnabled="{Binding CanManageCategories}"/>
+        <Button Text="Save Category" Command="{Binding SaveCategoryCommand}" IsVisible="{Binding CanManageCategories}" Margin="0,20,0,0"/>
+        <Button Text="Delete Category" Command="{Binding DeleteCategoryCommand}" IsVisible="{Binding CanManageCategories}" IsEnabled="{Binding IsExistingCategory}" BackgroundColor="Red" TextColor="White" Margin="0,10,0,0"/>
+        <Button Text="Cancel" Command="{Binding GoBackCommand}" IsEnabled="{Binding IsNotBusy}" Margin="0,10,0,0"/>
     </VerticalStackLayout>
 </ContentPage>

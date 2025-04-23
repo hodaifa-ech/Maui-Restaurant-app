@@ -3,9 +3,10 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using newRestaurant.Models;
 using newRestaurant.Services;
-using newRestaurant.Services.Interfaces;
+using newRestaurant.Services.Interfaces; // Use interfaces
 using newRestaurant.Views;
 using System.Collections.ObjectModel;
+using System.ComponentModel; // For PropertyChangedEventArgs
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -13,73 +14,96 @@ namespace newRestaurant.ViewModels
 {
     public partial class ReservationsViewModel : BaseViewModel
     {
-
         [ObservableProperty]
         private ObservableCollection<Reservation> _reservations = new();
 
         [ObservableProperty]
         private Reservation _selectedReservation;
 
-        // TODO: Replace with actual logged-in user ID
-        private const int CurrentUserId = 1;
+        [ObservableProperty]
+        private bool _isStaffOrAdmin;
+        [ObservableProperty]
+     // Use generated property name
+        private bool _canAddReservation;
 
-        private readonly IReservationService _reservationService; // ADD
+        private readonly IReservationService _reservationService;
         private readonly INavigationService _navigationService;
+        private readonly IAuthService _authService;
 
-        public ReservationsViewModel(/*IDataService dataService,*/ IReservationService reservationService, INavigationService navigationService) // CHANGE
+        public ReservationsViewModel(
+            IReservationService reservationService,
+            INavigationService navigationService,
+            IAuthService authService)
         {
-            // _dataService = dataService; // REMOVE
-            _reservationService = reservationService; // ADD
+            _reservationService = reservationService;
             _navigationService = navigationService;
+            _authService = authService;
             Title = "Reservations";
+
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateRolePermissions();
+        }
+
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(IAuthService.CurrentUser))
+            {
+                UpdateRolePermissions();
+                // Reload list when user changes
+                LoadReservationsCommand.ExecuteAsync(null);
+            }
+        }
+
+        private void UpdateRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            IsStaffOrAdmin = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+            CanAddReservation = user != null; // Any logged-in user can initiate adding
+             // Update command state
         }
 
         [RelayCommand]
         private async Task LoadReservationsAsync()
         {
+            var currentUser = _authService.CurrentUser;
+            if (currentUser == null) { Reservations.Clear(); return; }
             if (IsBusy) return;
             IsBusy = true;
+            UpdateRolePermissions(); // Ensure roles are current
             try
             {
                 Reservations.Clear();
-                // Option 1: Load all reservations (Admin view)
-                var reservationsList = await _reservationService.GetReservationsAsync();
-                // Option 2: Load reservations for current user (Customer view)
-                // var reservationsList = await _dataService.GetReservationsByUserAsync(CurrentUserId);
-
-                foreach (var res in reservationsList)
+                List<Reservation> reservationsList;
+                if (IsStaffOrAdmin)
                 {
-                    Reservations.Add(res);
+                    reservationsList = await _reservationService.GetReservationsAsync();
+                    Title = "All Reservations";
                 }
+                else
+                {
+                    reservationsList = await _reservationService.GetReservationsByUserAsync(currentUser.Id);
+                    Title = "My Reservations";
+                }
+                foreach (var res in reservationsList) Reservations.Add(res);
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading reservations: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to load reservations.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error loading reservations: {ex.Message}"); await Shell.Current.DisplayAlert("Error", "Failed to load reservations.", "OK"); }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        // Use the public property name for CanExecute
+        [RelayCommand(CanExecute = nameof(CanAddReservation))]
         private async Task AddReservationAsync()
         {
-            if (IsBusy) return;
+            if (!CanAddReservation) return;
             await _navigationService.NavigateToAsync(nameof(ReservationDetailPage));
         }
 
-        [RelayCommand]
+        [RelayCommand] // Allow navigation, detail page handles permissions
         private async Task GoToReservationDetailAsync()
         {
-            if (IsBusy || SelectedReservation == null) return;
-
-            await _navigationService.NavigateToAsync(nameof(ReservationDetailPage),
-                new Dictionary<string, object>
-                {
-                    { "ReservationId", SelectedReservation.Id }
-                });
+            if (IsBusy || SelectedReservation == null || _authService.CurrentUser == null) return;
+            await _navigationService.NavigateToAsync(nameof(ReservationDetailPage), new Dictionary<string, object> { { "ReservationId", SelectedReservation.Id } });
         }
+        // TODO: Unsubscribe _authService.PropertyChanged -= AuthService_PropertyChanged;
     }
 }

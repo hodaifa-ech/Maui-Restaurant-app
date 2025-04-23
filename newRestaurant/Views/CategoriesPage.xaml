@@ -1,29 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<!-- Views/CategoriesPage.xaml -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:newRestaurant.ViewModels"
              xmlns:model="clr-namespace:newRestaurant.Models"
              x:Class="newRestaurant.Views.CategoriesPage"
              x:DataType="vm:CategoriesViewModel"
-             >
+             Title="{Binding Title}">
+    <!-- Title is now dynamic -->
 
     <Grid RowDefinitions="Auto, *, Auto">
-
-        <ActivityIndicator IsVisible="{Binding IsBusy}"
-                           IsRunning="{Binding IsBusy}"
-                           HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           Grid.RowSpan="2"/>
-
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Grid.RowSpan="3" ZIndex="1"/>
         <CollectionView ItemsSource="{Binding Categories}"
                         SelectionMode="Single"
                         SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
                         SelectionChangedCommand="{Binding GoToCategoryDetailCommand}"
-                        Grid.Row="1">
+                        IsEnabled="{Binding CanManageCategories}" 
+            Grid.Row="1">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Category">
                     <Frame Padding="10" Margin="5" CornerRadius="5" BorderColor="LightGray">
                         <Label Text="{Binding Name}" FontSize="Medium" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal" />
+                                <VisualState Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="0.5" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
@@ -31,11 +37,9 @@
                 <Label Text="No categories found." HorizontalOptions="Center" VerticalOptions="Center"/>
             </CollectionView.EmptyView>
         </CollectionView>
-
         <Button Text="Add New Category"
                 Command="{Binding AddCategoryCommand}"
-                IsEnabled="{Binding IsNotBusy}"
-                Margin="20"
-                Grid.Row="2"/>
+                IsVisible="{Binding CanManageCategories}"
+            Margin="20" Grid.Row="2"/>
     </Grid>
 </ContentPage>

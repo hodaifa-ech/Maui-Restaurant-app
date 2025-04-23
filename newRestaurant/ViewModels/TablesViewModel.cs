@@ -1,31 +1,59 @@
+// ViewModels/TablesViewModel.cs
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using newRestaurant.Models;
 using newRestaurant.Services;
-using newRestaurant.Services.Interfaces;
+using newRestaurant.Services.Interfaces; // Ensure interfaces are used
 using newRestaurant.Views;
 using System.Collections.ObjectModel;
+using System.ComponentModel; // For PropertyChangedEventArgs
 using System.Diagnostics;
+using System.Threading.Tasks;
 
-namespace newRestaurant.ViewModels;
-
-public partial class TablesViewModel : BaseViewModel
+namespace newRestaurant.ViewModels
 {
-	
+    public partial class TablesViewModel : BaseViewModel
+    {
         [ObservableProperty]
         private ObservableCollection<Table> _tables = new();
 
         [ObservableProperty]
-        private Table _selectedTable; // Used for selection handling
+        [NotifyCanExecuteChangedFor(nameof(GoToTableDetailCommand))]
+        private Table _selectedTable;
 
-        private readonly ITableService _tableService; // ADD
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(AddTableCommand))]
+        [NotifyCanExecuteChangedFor(nameof(GoToTableDetailCommand))]
+        private bool _canManageTables;
+
+        private readonly ITableService _tableService;
         private readonly INavigationService _navigationService;
+        private readonly IAuthService _authService;
 
-        public TablesViewModel( ITableService tableService, INavigationService navigationService) 
+        public TablesViewModel(
+            ITableService tableService,
+            INavigationService navigationService,
+            IAuthService authService)
         {
-            _tableService = tableService; // ADD
+            _tableService = tableService;
             _navigationService = navigationService;
-            Title = "Manage Tables";
+            _authService = authService;
+            Title = "Tables"; // Default title
+
+            _authService.PropertyChanged += AuthService_PropertyChanged;
+            UpdateRolePermissions();
+        }
+
+        private void AuthService_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(IAuthService.CurrentUser)) UpdateRolePermissions();
+        }
+
+        private void UpdateRolePermissions()
+        {
+            var user = _authService.CurrentUser;
+            CanManageTables = user != null && (user.Role == UserRole.Staff || user.Role == UserRole.Admin);
+            Title = CanManageTables ? "Manage Tables" : "View Tables"; // Adjust title
         }
 
         [RelayCommand]
@@ -33,49 +61,32 @@ public partial class TablesViewModel : BaseViewModel
         {
             if (IsBusy) return;
             IsBusy = true;
+            UpdateRolePermissions();
             try
             {
                 _tables.Clear();
                 var tablesList = await _tableService.GetTablesAsync();
-                foreach (var table in tablesList)
-                {
-                    _tables.Add(table);
-                }
+                foreach (var table in tablesList) _tables.Add(table);
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading tablesList: {ex.Message}");
-                // Optionally display an error message to the user
-                await Shell.Current.DisplayAlert("Error", "Failed to load tablesList.", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            catch (Exception ex) { Debug.WriteLine($"Error loading tables: {ex.Message}"); await Shell.Current.DisplayAlert("Error", "Failed to load tables.", "OK"); }
+            finally { IsBusy = false; }
         }
 
-        [RelayCommand]
+        private bool CanAddTable() => CanManageTables && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanAddTable))]
         private async Task AddTableAsync()
         {
-            if (IsBusy) return;
-            // Navigate to detail page with no ID (indicating new category)
+            if (!CanManageTables) return;
             await _navigationService.NavigateToAsync(nameof(TableDetailPage));
         }
 
-        [RelayCommand]
+        private bool CanGoToDetail() => CanManageTables && SelectedTable != null && !IsBusy;
+        [RelayCommand(CanExecute = nameof(CanGoToDetail))]
         private async Task GoToTableDetailAsync()
         {
-            if (IsBusy || SelectedTable == null) return;
-
-            // Navigate to detail page with the selected category's ID
-            await _navigationService.NavigateToAsync(nameof(TableDetailPage),
-                new Dictionary<string, object>
-                {
-                        { "TableId", SelectedTable.Id } // Pass ID as parameter
-                });
-
-            // Deselect item after navigation (handled in OnAppearing of list page now)
-            // SelectedCategory = null;
+            if (!CanManageTables || SelectedTable == null) return;
+            await _navigationService.NavigateToAsync(nameof(TableDetailPage), new Dictionary<string, object> { { "TableId", SelectedTable.Id } });
         }
-
+        // TODO: Unsubscribe _authService.PropertyChanged -= AuthService_PropertyChanged;
+    }
 }
