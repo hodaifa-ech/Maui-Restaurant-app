@@ -1,0 +1,95 @@
+<!-- Views/NotificationsPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             xmlns:local="clr-namespace:newRestaurant.Converters"
+             x:Class="newRestaurant.Views.NotificationsPage"
+             x:DataType="vm:NotificationsViewModel"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <!-- Converters -->
+        <ResourceDictionary>
+            <local:InverseBoolConverter x:Key="InverseBoolConverter"/>
+            <local:InverseBoolToFontAttributesConverter x:Key="InverseBoolToFontAttributesConverter"
+                                                         FalseAttribute="Bold"
+                                                         TrueAttribute="None"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, Auto, *, Auto">
+        <!-- Activity Indicator -->
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"
+                           Grid.RowSpan="4" HorizontalOptions="Center" VerticalOptions="Center" ZIndex="1"/>
+
+        <!-- Toggle for showing read notifications -->
+        <HorizontalStackLayout Grid.Row="0" Padding="10" Spacing="10">
+            <Label Text="Show Read Notifications:" VerticalOptions="Center"/>
+            <Switch IsToggled="{Binding ShowReadNotifications}" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <!-- Button to mark all as read -->
+        <Button Text="Mark All Read"
+                Grid.Row="1" Margin="10,0" HorizontalOptions="End"
+                Command="{Binding MarkAllAsReadCommand}"
+                IsEnabled="{Binding HasNotifications}"/>
+
+        <!-- Notifications list -->
+        <CollectionView ItemsSource="{Binding Notifications}" Grid.Row="2" Margin="5">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Notification">
+                    <Frame Padding="10" Margin="5" CornerRadius="5" BorderColor="LightGray">
+                        <!-- Tap to mark as read -->
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:NotificationsViewModel}}, Path=MarkAsReadCommand}"
+                                 CommandParameter="{Binding .}"
+                                 NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
+
+                        <!-- Notification content -->
+                        <Grid ColumnDefinitions="*, Auto">
+                            <VerticalStackLayout Spacing="3">
+                                <Label Text="{Binding Title}"
+                                       FontSize="Medium"
+                                       FontAttributes="{Binding IsRead, Converter={StaticResource InverseBoolToFontAttributesConverter}}"/>
+                                <Label Text="{Binding Message}" FontSize="Small" MaxLines="3" LineBreakMode="TailTruncation"/>
+                                <Label Text="{Binding SentDate, StringFormat='{0:g}'}" FontSize="Micro" TextColor="Gray"/>
+                            </VerticalStackLayout>
+
+                            <!-- Blue dot if unread -->
+                            <BoxView Color="DodgerBlue" WidthRequest="8" HeightRequest="8" CornerRadius="4"
+                                     Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Margin="5"
+                                     IsVisible="{Binding IsRead, Converter={StaticResource InverseBoolConverter}}"/>
+                        </Grid>
+
+                        <!-- Visual states -->
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal"/>
+                                <VisualState Name="Read">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="0.6"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState Name="Unread">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="1.0"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <!-- Empty view -->
+            <CollectionView.EmptyView>
+                <Label Text="No notifications." HorizontalOptions="Center" VerticalOptions="Center" Padding="50"/>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <!-- Placeholder row for pagination, etc. -->
+    </Grid>
+</ContentPage>

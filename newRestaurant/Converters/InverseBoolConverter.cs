@@ -1,7 +1,8 @@
 ﻿// Converters/InverseBoolConverter.cs
-using System.Globalization; // Add this if not present
+using System.Globalization;
+using Microsoft.Maui.Controls; // Needed for IValueConverter
 
-namespace newRestaurant.Converters // Ensure this namespace matches your folder structure
+namespace newRestaurant.Converters // <--- MAKE SURE THIS NAMESPACE IS CORRECT
 {
     public class InverseBoolConverter : IValueConverter
     {
@@ -11,7 +12,7 @@ namespace newRestaurant.Converters // Ensure this namespace matches your folder 
             {
                 return !boolValue;
             }
-            return value; // Return original value if not a bool
+            return value;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -20,7 +21,7 @@ namespace newRestaurant.Converters // Ensure this namespace matches your folder 
             {
                 return !boolValue;
             }
-            return value; // Return original value if not a bool
+            return value;
         }
     }
 }

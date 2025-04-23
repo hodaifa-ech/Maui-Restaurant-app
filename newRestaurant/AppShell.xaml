@@ -21,7 +21,20 @@
             ContentTemplate="{DataTemplate views:TablesPage}"
             Route="TablesPage" />
     </FlyoutItem>
-
+    <FlyoutItem Title="Reports">
+        <!-- Make sure Icon exists -->
+        <ShellContent
+     Title="Statistics"
+     ContentTemplate="{DataTemplate views:StatisticsPage}"
+     Route="StatisticsPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Notifications" >
+        <!-- Add Icon -->
+        <ShellContent
+        Title="Notifications"
+        ContentTemplate="{DataTemplate views:NotificationsPage}"
+        Route="NotificationsPage" />
+    </FlyoutItem>
     <FlyoutItem Title="Orders and Reservations" Icon="cart_icon.png">
         <ShellContent
             Title="My Cart"
@@ -42,6 +55,7 @@
 
     <!-- Define Routes for Pages Navigated To (Detail pages) -->
     <!-- These are not directly in the Flyout/Tabs but can be navigated to -->
+    <ShellContent Route="NotificationsPage" ContentTemplate="{DataTemplate views:NotificationsPage}" IsVisible="False"/>
     <ShellContent Route="CategoryDetailPage" ContentTemplate="{DataTemplate views:CategoryDetailPage}" IsVisible="False"/>
     <ShellContent Route="PlatDetailPage" ContentTemplate="{DataTemplate views:PlatDetailPage}" IsVisible="False"/>
     <!-- ADDED -->

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:models="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.StatisticsPage"
+             x:DataType="vm:StatisticsViewModel"
+             Title="{Binding Title}">
+
+    <Grid Padding="20">
+
+        <!-- Statistics Section -->
+        <VerticalStackLayout Spacing="15" IsVisible="{Binding CanViewStatistics}">
+            <ActivityIndicator IsVisible="{Binding IsBusy}" 
+                               IsRunning="{Binding IsBusy}" 
+                               HorizontalOptions="Center"/>
+
+            <Frame Padding="15" CornerRadius="5" BorderColor="Gray">
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Total Revenue:" FontSize="Large" VerticalOptions="Center"/>
+                    <Label Text="{Binding TotalRevenue, StringFormat=' {0:C}'}" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Label Text="Most Popular Dishes (by Quantity Ordered):" FontSize="Medium" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding PopularDishes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Plat">
+                        <Grid ColumnDefinitions="*, Auto" Padding="5">
+                            <Label Text="{Binding Name}" VerticalOptions="Center"/>
+                           
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Label Text="No dish data available." HorizontalOptions="Center" Padding="20"/>
+                </CollectionView.EmptyView>
+            </CollectionView>
+
+            <Button Text="Refresh Statistics" Command="{Binding LoadStatisticsCommand}" IsEnabled="{Binding IsNotBusy}"/>
+        </VerticalStackLayout>
+
+        <!-- Permission Denied Message -->
+        <Label Text="You do not have permission to view statistics."
+               IsVisible="{Binding CanViewStatistics, Converter={StaticResource InverseBoolConverter}}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Gray"/>
+    </Grid>
+</ContentPage>

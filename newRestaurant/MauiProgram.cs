@@ -49,6 +49,8 @@ namespace newRestaurant
             builder.Services.AddScoped<IStatisticsService, StatisticsService>();
             // REMOVED: builder.Services.AddScoped<IDataService, MySqlDataService>();
             builder.Services.AddSingleton<IAuthService, AuthService>();
+            builder.Services.AddScoped<IStatisticsService, StatisticsService>();
+            builder.Services.AddScoped<INotificationService, NotificationService>();
             // --- Register ViewModels ---
             // (Ensure these inject the NEW specific service interfaces)
             builder.Services.AddTransient<CategoriesViewModel>();
@@ -58,12 +60,14 @@ namespace newRestaurant
             builder.Services.AddTransient<ReservationsViewModel>();
             builder.Services.AddTransient<ReservationDetailViewModel>();
             builder.Services.AddSingleton<CartViewModel>();
+            builder.Services.AddTransient<StatisticsViewModel>();
             //builder.Services.AddTransient<LoginViewModel>(); // Register if using
             //builder.Services.AddTransient<StatisticsViewModel>(); // Register if using
             builder.Services.AddTransient<TablesViewModel>(); // <-- ADD
             builder.Services.AddTransient<TableDetailViewModel>(); // <-- ADD
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<RegisterViewModel>();
+            builder.Services.AddTransient<NotificationsViewModel>();
             // --- Register Views ---
             builder.Services.AddTransient<CategoriesPage>();
             builder.Services.AddTransient<CategoryDetailPage>();
@@ -72,6 +76,8 @@ namespace newRestaurant
             builder.Services.AddTransient<ReservationsPage>();
             builder.Services.AddTransient<ReservationDetailPage>();
             builder.Services.AddTransient<CartPage>();
+            builder.Services.AddTransient<StatisticsPage>();
+            builder.Services.AddTransient<NotificationsPage>();
             //builder.Services.AddTransient<LoginPage>(); // Register if using
             //builder.Services.AddTransient<StatisticsPage>(); // Register if using
             builder.Services.AddTransient<TablesPage>(); // <-- ADD
