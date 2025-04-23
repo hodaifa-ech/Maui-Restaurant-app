@@ -1,0 +1,26 @@
+<!-- Views/LoginPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             x:Class="newRestaurant.Views.LoginPage"
+             x:DataType="vm:LoginViewModel"
+             Shell.NavBarIsVisible="False"
+             Title="Login">
+
+    <VerticalStackLayout Spacing="15" Padding="30" VerticalOptions="Center">
+        <Label Text="Restaurant Manager" FontSize="Header" HorizontalOptions="Center" SemanticProperties.HeadingLevel="Level1"/>
+        <Label Text="Please log in" HorizontalOptions="Center"/>
+
+        <Entry Placeholder="Username" Text="{Binding Username}" Keyboard="Plain" />
+        <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
+
+        <Button Text="Login" Command="{Binding LoginCommand}" IsEnabled="{Binding IsNotBusy}" HorizontalOptions="Fill" />
+
+        <Button Text="Register Here" Command="{Binding NavigateToRegisterCommand}" IsEnabled="{Binding IsNotBusy}" HorizontalOptions="Fill" />
+        <!-- Use TextButton style if defined in App.xaml Resources, otherwise a normal button -->
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Center" />
+        <Label Text="{Binding ErrorMessage}" TextColor="Red" IsVisible="{Binding HasError}" HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

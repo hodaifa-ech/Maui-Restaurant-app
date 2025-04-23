@@ -1,0 +1,84 @@
+<!-- Views/CartPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.CartPage"
+             x:DataType="vm:CartViewModel"
+             Title="{Binding Title}">
+
+    <Grid RowDefinitions="*, Auto, Auto">
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Fill" VerticalOptions="Center"
+                           Grid.RowSpan="3" ZIndex="1"/>
+
+        <CollectionView ItemsSource="{Binding CartItems}"
+                        Grid.Row="0" Margin="5">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:CartPlat">
+                    <Frame Padding="10" CornerRadius="5" BorderColor="LightGray" Margin="0,0,0,5">
+                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
+                            <Label Text="{Binding Plat.Name}" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+                            <Label Grid.Column="0" Grid.Row="1" FontSize="Small">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Plat.Price, StringFormat='{0:C}'}"/>
+                                        <Span Text=" x "/>
+                                        <Span Text="{Binding Quantity}"/>
+                                        <Span Text=" = "/>
+                                        <Span Text="{Binding TotalLinePrice, StringFormat='{0:C}'}" FontAttributes="Bold"/>
+                                        <!-- Need TotalLinePrice property in CartPlat model or calculate here -->
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <!-- Quantity Controls -->
+                            <HorizontalStackLayout Grid.Column="1" Grid.RowSpan="2" VerticalOptions="Center" Spacing="5">
+                                <Button Text="-"
+                                         FontSize="Medium" Padding="8" CornerRadius="15" HeightRequest="40" WidthRequest="40"
+                                         Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=DecreaseQuantityCommand}"
+                                         CommandParameter="{Binding .}"/>
+                                <Label Text="{Binding Quantity}" VerticalOptions="Center" FontSize="Medium" WidthRequest="30" HorizontalTextAlignment="Center"/>
+                                <Button Text="+"
+                                         FontSize="Medium" Padding="8" CornerRadius="15" HeightRequest="40" WidthRequest="40"
+                                         Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=IncreaseQuantityCommand}"
+                                         CommandParameter="{Binding .}"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Optional: Remove Button -->
+                            <!-- <Button Text="Remove" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="Transparent" TextColor="Red" FontSize="Micro" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=RemoveItemCommand}" CommandParameter="{Binding .}"/> -->
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="50" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="??" FontSize="40" HorizontalTextAlignment="Center"/>
+                    <Label Text="Your cart is empty." HorizontalOptions="Center" FontSize="Medium"/>
+                    <Label Text="Add some delicious dishes from the menu!" HorizontalOptions="Center" TextColor="Gray"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <!-- Total Price -->
+        <Frame Grid.Row="1" Padding="15" Margin="10" CornerRadius="5" BorderColor="Gray">
+            <HorizontalStackLayout HorizontalOptions="End">
+                <Label Text="Total:" FontSize="Large" VerticalOptions="Center"/>
+                <Label Text="{Binding TotalPrice, StringFormat=' {0:C}'}" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <!-- Checkout Button -->
+        <Button Text="Checkout"
+                Grid.Row="2"
+                Command="{Binding CheckoutCommand}"
+                IsEnabled="{Binding HasItems}"
+                FontSize="Large"
+                Margin="10" HeightRequest="50"/>
+
+    </Grid>
+</ContentPage>

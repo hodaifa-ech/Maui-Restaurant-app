@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.CategoriesPage"
+             x:DataType="vm:CategoriesViewModel"
+             >
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"/>
+
+        <CollectionView ItemsSource="{Binding Categories}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                        SelectionChangedCommand="{Binding GoToCategoryDetailCommand}"
+                        Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Category">
+                    <Frame Padding="10" Margin="5" CornerRadius="5" BorderColor="LightGray">
+                        <Label Text="{Binding Name}" FontSize="Medium" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <Label Text="No categories found." HorizontalOptions="Center" VerticalOptions="Center"/>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <Button Text="Add New Category"
+                Command="{Binding AddCategoryCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Margin="20"
+                Grid.Row="2"/>
+    </Grid>
+</ContentPage>

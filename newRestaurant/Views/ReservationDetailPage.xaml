@@ -1,0 +1,68 @@
+<!-- Views/ReservationDetailPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.ReservationDetailPage"
+             x:DataType="vm:ReservationDetailViewModel"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Fill"/>
+
+            <Label Text="{Binding UserName, StringFormat='User: {0}'}" FontSize="Small" TextColor="Gray"/>
+
+            <Label Text="Table:"/>
+            <Picker ItemsSource="{Binding Tables}"
+                    SelectedItem="{Binding SelectedTable}"
+                    ItemDisplayBinding="{Binding TableNumber}"
+                    Title="Select a Table"/>
+
+            <Label Text="Date:"/>
+            <DatePicker Date="{Binding SelectedDate}" />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <VerticalStackLayout Grid.Column="0">
+                    <Label Text="Start Time:"/>
+                    <TimePicker Time="{Binding StartTime}" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="End Time:"/>
+                    <TimePicker Time="{Binding EndTime}" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Optional: Status Picker (if status is editable, e.g., by admin) -->
+            <!-- <Label Text="Status:"/>
+             <Picker SelectedItem="{Binding Status}">
+                 <Picker.ItemsSource>
+                     <x:Array Type="{x:Type model:ReservationStatus}">
+                         <model:ReservationStatus>Pending</model:ReservationStatus>
+                         <model:ReservationStatus>Confirmed</model:ReservationStatus>
+                         <model:ReservationStatus>Cancelled</model:ReservationStatus>
+                         <model:ReservationStatus>Completed</model:ReservationStatus>
+                     </x:Array>
+                 </Picker.ItemsSource>
+             </Picker> -->
+
+
+            <Button Text="Save Reservation"
+                    Command="{Binding SaveReservationCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    Margin="0,20,0,0"/>
+
+            <Button Text="Delete Reservation"
+                    Command="{Binding DeleteReservationCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    IsVisible="{Binding IsExistingReservation}"
+                    BackgroundColor="Red" TextColor="White"
+                    Margin="0,10,0,0"/>
+
+            <Button Text="Cancel"
+                    Command="{Binding GoBackCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    Margin="0,10,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

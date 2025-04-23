@@ -1,0 +1,58 @@
+<!-- Views/ReservationsPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.ReservationsPage"
+             x:DataType="vm:ReservationsViewModel"
+             Title="{Binding Title}">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Fill" VerticalOptions="Center"
+                           Grid.RowSpan="3" ZIndex="1"/>
+
+        <CollectionView ItemsSource="{Binding Reservations}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedReservation, Mode=TwoWay}"
+                        SelectionChangedCommand="{Binding GoToReservationDetailCommand}"
+                        Grid.Row="1" Margin="5">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Reservation">
+                    <Frame Padding="10" CornerRadius="5" BorderColor="LightGray">
+                        <VerticalStackLayout Spacing="3">
+                            <Label FontSize="Medium">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Table: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding Table.TableNumber}"/>
+                                        <Span Text=" ("/>
+                                        <Span Text="{Binding Status}"/>
+                                        <Span Text=")"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Text="{Binding TimeStart, StringFormat='Start: {0:g}'}" FontSize="Small"/>
+                            <Label Text="{Binding TimeEnd, StringFormat='End:   {0:g}'}" FontSize="Small"/>
+                            <Label Text="{Binding User.Username, StringFormat='User: {0}'}" FontSize="Small" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <Label Text="No reservations found." HorizontalOptions="Center" VerticalOptions="Center"/>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <Button Text="Add New Reservation"
+                Command="{Binding AddReservationCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Margin="20"
+                Grid.Row="2"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="newRestaurant.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:newRestaurant"
+    xmlns:views="clr-namespace:newRestaurant.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Management" Icon="manage_icon.png">
+        <ShellContent
+            Title="Categories"
+            ContentTemplate="{DataTemplate views:CategoriesPage}"
+            Route="CategoriesPage" />
+        <ShellContent
+            Title="Dishes"
+            ContentTemplate="{DataTemplate views:PlatsPage}"
+            Route="PlatsPage" />
+        <ShellContent
+            Title="Tables" 
+            ContentTemplate="{DataTemplate views:TablesPage}"
+            Route="TablesPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Orders and Reservations" Icon="cart_icon.png">
+        <ShellContent
+            Title="My Cart"
+            ContentTemplate="{DataTemplate views:CartPage}"
+            Route="CartPage" />
+            <ShellContent
+            Title="Reservations"
+            ContentTemplate="{DataTemplate views:ReservationsPage}"
+                Route="ReservationsPage" />
+    </FlyoutItem>
+
+    <!--FlyoutItem Title="Reports" Icon="stats_icon.png">
+        <ShellContent
+            Title="Statistics"
+            ContentTemplate="{DataTemplate views:StatisticsPage}"
+            Route="StatisticsPage" />
+    </FlyoutItem-->
+
+    <!-- Define Routes for Pages Navigated To (Detail pages) -->
+    <!-- These are not directly in the Flyout/Tabs but can be navigated to -->
+    <ShellContent Route="CategoryDetailPage" ContentTemplate="{DataTemplate views:CategoryDetailPage}" IsVisible="False"/>
+    <ShellContent Route="PlatDetailPage" ContentTemplate="{DataTemplate views:PlatDetailPage}" IsVisible="False"/>
+    <!-- ADDED -->
+    <ShellContent Route="ReservationDetailPage" ContentTemplate="{DataTemplate views:ReservationDetailPage}" IsVisible="False"/>
+    <ShellContent Route="TableDetailPage" ContentTemplate="{DataTemplate views:TableDetailPage}" IsVisible="False"/>
+    <!-- ADDED -->
+
+    <!-- ADDED -->
+    <!-- Login route if needed -->
+    <!-- <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate views:LoginPage}" IsVisible="False"/> -->
+
+</Shell>
